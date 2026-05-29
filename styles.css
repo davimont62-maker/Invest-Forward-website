@@ -259,6 +259,14 @@ p {
   font-size: clamp(1.05rem, 2vw, 1.36rem);
 }
 
+.hero-note,
+.confidential-note {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: rgba(226, 232, 240, 0.72);
+  font-size: 0.86rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -388,6 +396,77 @@ p {
   gap: 18px;
 }
 
+.audience-section {
+  padding-top: clamp(40px, 6vw, 88px);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.audience-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  padding: clamp(28px, 5vw, 54px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(77, 183, 255, 0.12), rgba(200, 168, 106, 0.08)),
+    rgba(255, 255, 255, 0.075);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.audience-card:hover,
+.teaser-card:hover,
+.selected-projects-grid article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(200, 168, 106, 0.38);
+}
+
+.audience-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 36px;
+  border: 1px solid rgba(200, 168, 106, 0.48);
+  background:
+    linear-gradient(135deg, rgba(200, 168, 106, 0.28), rgba(77, 183, 255, 0.18)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.audience-card p:not(.eyebrow) {
+  max-width: 620px;
+}
+
+.audience-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 28px 0 32px;
+  padding: 0;
+  list-style: none;
+  color: var(--soft);
+}
+
+.audience-card li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--soft);
+}
+
+.audience-card li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--gold);
+  transform: translateY(-50%) rotate(45deg);
+}
+
 .track-section {
   border-block: 1px solid var(--line);
   background:
@@ -429,6 +508,42 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.featured-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.filter-chip {
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--soft);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.filter-chip:hover,
+.filter-chip.is-active {
+  border-color: rgba(200, 168, 106, 0.54);
+  background: rgba(200, 168, 106, 0.13);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
 .opportunity-card,
 .service-grid article,
 .team-grid article {
@@ -443,6 +558,11 @@ p {
   flex-direction: column;
   min-height: 390px;
   padding: clamp(22px, 3vw, 30px);
+}
+
+.teaser-card {
+  min-height: 520px;
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 
 .card-topline {
@@ -465,6 +585,32 @@ p {
   color: var(--soft);
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.teaser-details {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 0;
+}
+
+.teaser-details div {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.teaser-details dt {
+  color: rgba(226, 232, 240, 0.62);
+  font-size: 0.72rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.teaser-details dd {
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.92rem;
 }
 
 .text-link {
@@ -490,6 +636,61 @@ p {
   border-block: 1px solid var(--line);
 }
 
+.pipeline-section,
+.selected-projects-section {
+  border-block: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.022);
+}
+
+.pipeline-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.065);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+}
+
+.pipeline-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.pipeline-table th,
+.pipeline-table td {
+  padding: 20px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: left;
+}
+
+.pipeline-table th {
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pipeline-table td {
+  color: var(--soft);
+}
+
+.pipeline-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.status-pill {
+  display: inline-flex;
+  min-width: 108px;
+  justify-content: center;
+  padding: 6px 10px;
+  border: 1px solid rgba(77, 183, 255, 0.34);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(77, 183, 255, 0.09);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
 .process-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -511,6 +712,30 @@ p {
 .service-grid article {
   min-height: 250px;
   padding: 28px;
+}
+
+.selected-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.selected-projects-grid article {
+  min-height: 300px;
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-strong), rgba(255, 255, 255, 0.07));
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.selected-projects-grid span {
+  display: block;
+  margin-bottom: 42px;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 700;
 }
 
 .investors-section {
@@ -585,6 +810,24 @@ p {
 .contact-section {
   border-top: 1px solid var(--line);
   background: var(--navy-2);
+}
+
+.network-section {
+  padding-top: clamp(42px, 7vw, 94px);
+}
+
+.network-panel {
+  align-items: start;
+}
+
+.network-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.network-form .btn {
+  grid-column: 1 / -1;
 }
 
 .contact-layout {
@@ -689,6 +932,10 @@ textarea:focus {
   font-weight: 600;
 }
 
+input::placeholder {
+  color: rgba(226, 232, 240, 0.42);
+}
+
 .disclaimer {
   margin-top: 28px;
   padding-top: 22px;
@@ -705,6 +952,7 @@ textarea:focus {
   }
 
   .opportunity-grid,
+  .featured-grid,
   .service-grid,
   .credibility-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -715,7 +963,8 @@ textarea:focus {
   }
 
   .team-grid,
-  .why-grid {
+  .why-grid,
+  .selected-projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -777,10 +1026,15 @@ textarea:focus {
 
   .value-grid,
   .split,
+  .audience-grid,
   .investor-panel,
   .contact-layout,
   .footer-layout {
     grid-template-columns: 1fr;
+  }
+
+  .audience-card {
+    min-height: 0;
   }
 
   .value-grid article + article {
@@ -817,16 +1071,19 @@ textarea:focus {
   }
 
   .opportunity-grid,
+  .featured-grid,
   .service-grid,
   .process-list,
   .team-grid,
   .credibility-grid,
-  .why-grid {
+  .why-grid,
+  .selected-projects-grid,
+  .network-form {
     grid-template-columns: 1fr;
   }
 
   .opportunity-card {
-    min-height: 330px;
+    min-height: 0;
   }
 
   .process-list article {
@@ -835,8 +1092,17 @@ textarea:focus {
   }
 
   .credibility-grid article,
-  .why-grid article {
+  .why-grid article,
+  .selected-projects-grid article {
     min-height: 0;
+  }
+
+  .filter-panel {
+    padding: 10px;
+  }
+
+  .filter-chip {
+    flex: 1 1 auto;
   }
 
   .footer-layout {

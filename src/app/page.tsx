@@ -1,8 +1,77 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
+
+const opportunityFilters = [
+  "All",
+  "Industrial",
+  "Energy",
+  "Technology",
+  "Defense",
+  "Infrastructure",
+  "Seed",
+  "Growth",
+  "Expansion",
+  "Strategic Partnership",
+];
+
+const featuredOpportunities = [
+  {
+    title: "Defense Manufacturing Expansion",
+    sector: "Defense",
+    geography: "Europe",
+    stage: "Development",
+    seeking: "Strategic Investors",
+    status: "Active",
+    tags: ["Defense", "Expansion", "Strategic Partnership"],
+  },
+  {
+    title: "Industrial Manufacturing Platform",
+    sector: "Industrial",
+    geography: "UK / EU",
+    stage: "Expansion",
+    seeking: "Capital & Distribution Partners",
+    status: "Active",
+    tags: ["Industrial", "Expansion", "Strategic Partnership"],
+  },
+  {
+    title: "LovingPDF",
+    sector: "Technology / SaaS",
+    geography: "Global",
+    stage: "Early Growth",
+    seeking: "Strategic Capital",
+    status: "Under Review",
+    tags: ["Technology", "Growth"],
+  },
+  {
+    title: "Energy Infrastructure Initiative",
+    sector: "Energy",
+    geography: "Europe",
+    stage: "Feasibility",
+    seeking: "Institutional Partners",
+    status: "Active",
+    tags: ["Energy", "Infrastructure", "Seed", "Strategic Partnership"],
+  },
+];
+
+const pipelineRows = [
+  { sector: "Defense", stage: "Development", geography: "Europe", status: "Active" },
+  { sector: "Industrial", stage: "Expansion", geography: "UK / EU", status: "Active" },
+  { sector: "SaaS", stage: "Early Growth", geography: "Global", status: "Under Review" },
+  { sector: "Energy", stage: "Feasibility", geography: "Europe", status: "Active" },
+];
 
 export default function Home() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const visibleOpportunities = useMemo(() => {
+    if (activeFilter === "All") {
+      return featuredOpportunities;
+    }
+
+    return featuredOpportunities.filter((opportunity) => opportunity.tags.includes(activeFilter));
+  }, [activeFilter]);
+
   useEffect(() => {
     const header = document.querySelector("[data-header]");
     const menuToggle = document.querySelector(".menu-toggle");
@@ -59,8 +128,9 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#track-record">Track Record</a>
           <a href="#opportunities">Opportunities</a>
+          <a href="#pipeline">Pipeline</a>
           <a href="#process">How We Work</a>
-          <a href="#why">Why Invest Forward</a>
+          <a href="#network">Investor Network</a>
           <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -80,8 +150,9 @@ export default function Home() {
             </p>
             <div className="hero-actions" aria-label="Primary calls to action">
               <a className="btn btn-primary" href="#opportunities">View Opportunities</a>
-              <a className="btn btn-secondary" href="#contact">Contact the Team</a>
+              <a className="btn btn-secondary" href="#network">Request Access</a>
             </div>
+            <p className="hero-note">Selected opportunities available upon request. Detailed information is provided to qualified parties subject to review.</p>
           </div>
         </section>
 
@@ -161,55 +232,134 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section audience-section" id="access">
+          <div className="container audience-grid">
+            <article className="audience-card">
+              <div className="audience-icon" aria-hidden="true"></div>
+              <p className="eyebrow">For Investors</p>
+              <h2>Access selected real-economy opportunities.</h2>
+              <p>
+                Invest Forward provides access to selected investment opportunities across
+                industrial, energy, infrastructure, technology, and strategic manufacturing sectors.
+              </p>
+              <ul>
+                <li>Curated investment opportunities</li>
+                <li>Cross-border projects</li>
+                <li>Strategic and industrial sectors</li>
+                <li>Qualified introductions</li>
+                <li>Long-term development focus</li>
+              </ul>
+              <a className="btn btn-primary" href="#network">Request Access</a>
+            </article>
+            <article className="audience-card">
+              <div className="audience-icon" aria-hidden="true"></div>
+              <p className="eyebrow">For Project Owners</p>
+              <h2>Structure and present investment-grade projects.</h2>
+              <p>
+                We support project developers, industrial groups, and founders in preparing
+                opportunities for qualified investor and strategic partner review.
+              </p>
+              <ul>
+                <li>Opportunity structuring</li>
+                <li>Investment materials</li>
+                <li>Capital introduction</li>
+                <li>Strategic positioning</li>
+                <li>Investor presentation support</li>
+              </ul>
+              <a className="btn btn-secondary" href="#contact">Submit Opportunity</a>
+            </article>
+          </div>
+        </section>
+
         <section className="section" id="opportunities">
           <div className="container section-heading">
-            <p className="eyebrow">Selected opportunities</p>
-            <h2>Structured propositions for qualified capital.</h2>
+            <p className="eyebrow">Controlled access</p>
+            <h2>Featured Opportunities</h2>
             <p>
-              A focused portfolio of selected projects prepared for qualified investors, family
-              offices, strategic partners, and sector-aligned capital providers.
+              Institutional-style opportunity teasers from a selective pipeline. Additional
+              documentation is available to qualified parties subject to review and, where relevant,
+              confidentiality arrangements.
             </p>
           </div>
-          <div className="container card-grid opportunity-grid">
-            <article className="opportunity-card">
-              <div className="card-topline">
-                <span>Strategic Industrial Project</span>
-                <span>Investor presentation ready</span>
-              </div>
-              <h3>Gunpowder Project - Vegetable Charcoal</h3>
-              <p>
-                A strategic industrial project focused on vegetable charcoal production, prepared for
-                qualified investor review, strategic partner assessment, and structured due diligence.
-              </p>
-              <div className="funding">Industrial project development</div>
-              <a className="text-link" href="#contact">Request Teaser</a>
-            </article>
-            <article className="opportunity-card">
-              <div className="card-topline">
-                <span>Technology Venture</span>
-                <span>Structured review</span>
-              </div>
-              <h3>LovingPDF</h3>
-              <p>
-                A technology venture being developed into a clearer commercial proposition with
-                supporting materials for partner and capital review.
-              </p>
-              <div className="funding">Technology and growth platform</div>
-              <a className="text-link" href="#contact">Request Teaser</a>
-            </article>
-            <article className="opportunity-card">
-              <div className="card-topline">
-                <span>Digital Infrastructure</span>
-                <span>Concept structuring</span>
-              </div>
-              <h3>BitPoint</h3>
-              <p>
-                A digital infrastructure concept being assessed through market logic, operating
-                requirements, and investor-facing documentation.
-              </p>
-              <div className="funding">Early-stage project structuring</div>
-              <a className="text-link" href="#contact">Request Teaser</a>
-            </article>
+          <div className="container filter-panel" aria-label="Opportunity filters">
+            {opportunityFilters.map((filter) => (
+              <button
+                className={`filter-chip${activeFilter === filter ? " is-active" : ""}`}
+                key={filter}
+                type="button"
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+          <div className="container card-grid opportunity-grid featured-grid">
+            {visibleOpportunities.map((opportunity) => (
+              <article className="opportunity-card teaser-card" key={opportunity.title}>
+                <div className="card-topline">
+                  <span>{opportunity.sector}</span>
+                  <span>{opportunity.status}</span>
+                </div>
+                <h3>{opportunity.title}</h3>
+                <dl className="teaser-details">
+                  <div>
+                    <dt>Sector</dt>
+                    <dd>{opportunity.sector}</dd>
+                  </div>
+                  <div>
+                    <dt>Geography</dt>
+                    <dd>{opportunity.geography}</dd>
+                  </div>
+                  <div>
+                    <dt>Development Stage</dt>
+                    <dd>{opportunity.stage}</dd>
+                  </div>
+                  <div>
+                    <dt>Strategic Requirement</dt>
+                    <dd>{opportunity.seeking}</dd>
+                  </div>
+                  <div>
+                    <dt>Status</dt>
+                    <dd>{opportunity.status}</dd>
+                  </div>
+                </dl>
+                <p className="confidential-note">Detailed information provided to qualified parties.</p>
+                <a className="text-link" href="#network">Request Access</a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section pipeline-section" id="pipeline">
+          <div className="container section-heading">
+            <p className="eyebrow">Deal flow</p>
+            <h2>Current Opportunity Pipeline</h2>
+            <p>
+              A concise view of active and review-stage projects across the Invest Forward
+              origination pipeline.
+            </p>
+          </div>
+          <div className="container pipeline-table-wrap">
+            <table className="pipeline-table">
+              <thead>
+                <tr>
+                  <th>Sector</th>
+                  <th>Stage</th>
+                  <th>Geography</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {pipelineRows.map((row) => (
+                  <tr key={`${row.sector}-${row.stage}`}>
+                    <td>{row.sector}</td>
+                    <td>{row.stage}</td>
+                    <td>{row.geography}</td>
+                    <td><span className="status-pill">{row.status}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 
@@ -277,6 +427,34 @@ export default function Home() {
             <article>
               <h3>Strategic Partnerships & Institutional Liaison</h3>
               <p>Aligning opportunities with relevant operating partners, institutions and capital providers.</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="section selected-projects-section" id="selected-projects">
+          <div className="container section-heading">
+            <p className="eyebrow">Project involvement</p>
+            <h2>Selected Projects</h2>
+            <p>
+              Examples of confidential project-development support, strategic positioning, and
+              capital-introduction preparation.
+            </p>
+          </div>
+          <div className="container selected-projects-grid">
+            <article>
+              <span>01</span>
+              <h3>Industrial Manufacturing Expansion</h3>
+              <p>Cross-border development support, European market positioning, and investor introduction.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Energy Infrastructure Initiative</h3>
+              <p>Project structuring and institutional stakeholder coordination.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Technology Platform Development</h3>
+              <p>Business model positioning and strategic capital introduction.</p>
             </article>
           </div>
         </section>
@@ -354,6 +532,51 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section network-section" id="network">
+          <div className="container investor-panel network-panel">
+            <div>
+              <p className="eyebrow">Private access</p>
+              <h2>Join Our Investor Network</h2>
+              <p>
+                Invest Forward maintains relationships with qualified investors, strategic partners,
+                family offices, and institutional contacts interested in selected opportunities
+                across real-economy sectors.
+              </p>
+              <p className="confidential-note">
+                Additional documentation is shared selectively after qualification and, where
+                appropriate, NDA review.
+              </p>
+            </div>
+            <form className="network-form" action="#" method="post">
+              <label>
+                <span>Name</span>
+                <input type="text" name="investor-name" autoComplete="name" required />
+              </label>
+              <label>
+                <span>Organisation</span>
+                <input type="text" name="organisation" autoComplete="organization" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="investor-email" autoComplete="email" required />
+              </label>
+              <label>
+                <span>Investment Focus</span>
+                <input type="text" name="investment-focus" placeholder="Industrial, energy, technology..." />
+              </label>
+              <label>
+                <span>Geography</span>
+                <input type="text" name="geography" placeholder="UK, Europe, global..." />
+              </label>
+              <label>
+                <span>Typical Investment Range</span>
+                <input type="text" name="investment-range" placeholder="Confidential / indicative" />
+              </label>
+              <button className="btn btn-primary" type="submit">Register Interest</button>
+            </form>
+          </div>
+        </section>
+
         <section className="section contact-section" id="contact">
           <div className="container contact-layout">
             <div>
@@ -409,8 +632,8 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#track-record">Track Record</a>
             <a href="#opportunities">Opportunities</a>
-            <a href="#process">How We Work</a>
-            <a href="#why">Why Invest Forward</a>
+            <a href="#pipeline">Pipeline</a>
+            <a href="#network">Investor Network</a>
             <a href="#contact">Contact</a>
           </nav>
           <a className="email-link" href="mailto:enquiries@investforward.com">enquiries@investforward.com</a>
