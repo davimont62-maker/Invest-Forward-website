@@ -39,11 +39,13 @@ export default function SiteFooter() {
           <a className="email-link" href="mailto:enquiries@investforward.com">enquiries@investforward.com</a>
         </div>
       </div>
-      <p className="container disclaimer">
-        Invest Forward does not provide regulated financial advice and does not make public offers
-        of securities. Information presented is for qualified parties only and is subject to due
-        diligence, professional advice, and applicable regulations.
-      </p>
+      <div className="container footer-disclaimer">
+        <p>
+          Invest Forward does not provide regulated financial advice and does not make public offers
+          of securities. Information presented is for qualified parties only and is subject to due
+          diligence, professional advice, and applicable regulations.
+        </p>
+      </div>
     </footer>
   );
 }
