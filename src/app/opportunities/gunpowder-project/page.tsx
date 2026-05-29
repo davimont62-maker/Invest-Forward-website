@@ -93,7 +93,7 @@ export default function GunpowderProjectPage() {
 
             <form
               className="contact-form"
-              action="mailto:enquiries@investforward.com?subject=Gunpowder%20Project%20teaser%20access%20request"
+              action="mailto:enquiries@investforward.co.uk?subject=Gunpowder%20Project%20teaser%20access%20request"
               method="post"
               encType="text/plain"
             >

@@ -27,7 +27,7 @@ export default function ContactPage() {
               <p className="eyebrow">Direct contact</p>
               <h2>Relationship-led enquiries.</h2>
               <p>For confidential project or investor discussions, contact the team directly.</p>
-              <a className="email-link" href="mailto:enquiries@investforward.com">enquiries@investforward.com</a>
+              <a className="email-link" href="mailto:enquiries@investforward.co.uk">enquiries@investforward.co.uk</a>
             </div>
             <form className="contact-form" action="#" method="post">
               <label><span>Name</span><input type="text" name="name" autoComplete="name" required /></label>

@@ -1,19 +1,14 @@
 "use client";
 
 import BrandLogo from "@/components/BrandLogo";
+import { defaultLocale, navLabels, navLinks, supportedLocales, type Locale } from "@/config/i18n";
+import type { ChangeEvent } from "react";
 import { useEffect } from "react";
-
-const navItems = [
-  ["Home", "/"],
-  ["About", "/about"],
-  ["Services", "/services"],
-  ["Investors", "/investors"],
-  ["Opportunities", "/opportunities"],
-  ["Team", "/team"],
-  ["Contact", "/contact"],
-];
+import { useState } from "react";
 
 export default function SiteHeader() {
+  const [locale, setLocale] = useState<Locale>(defaultLocale);
+
   useEffect(() => {
     const header = document.querySelector("[data-header]");
     const menuToggle = document.querySelector(".menu-toggle");
@@ -49,6 +44,19 @@ export default function SiteHeader() {
     };
   }, []);
 
+  useEffect(() => {
+    const savedLocale = window.localStorage.getItem("invest-forward-locale");
+    if (savedLocale === "en" || savedLocale === "it" || savedLocale === "zh") {
+      setLocale(savedLocale);
+    }
+  }, []);
+
+  const handleLocaleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const nextLocale = event.target.value as Locale;
+    setLocale(nextLocale);
+    window.localStorage.setItem("invest-forward-locale", nextLocale);
+  };
+
   return (
     <header className="site-header" data-header>
       <a className="brand" href="/" aria-label="Invest Forward home">
@@ -60,11 +68,25 @@ export default function SiteHeader() {
         <span></span>
       </button>
       <nav className="site-nav" id="site-nav" aria-label="Primary navigation">
-        {navItems.map(([label, href]) => (
-          <a className={href === "/opportunities" ? "nav-featured" : undefined} href={href} key={href}>
-            {label}
+        {navLinks.map((item) => (
+          <a
+            className={"featured" in item && item.featured ? "nav-featured" : undefined}
+            href={item.href}
+            key={item.href}
+          >
+            {navLabels[locale][item.key]}
           </a>
         ))}
+        <label className="language-select">
+          <span>Language</span>
+          <select aria-label="Language" value={locale} onChange={handleLocaleChange}>
+            {supportedLocales.map((language) => (
+              <option value={language.code} key={language.code}>
+                {language.shortLabel}
+              </option>
+            ))}
+          </select>
+        </label>
       </nav>
     </header>
   );

@@ -10,7 +10,7 @@ export const siteConfig = {
     founded: 2020,
     registeredAddress: "London, United Kingdom",
     companyNumber: "[Company Number]",
-    email: "hello@investforward.co.uk",
+    email: "enquiries@investforward.co.uk",
     phone: "+44 (0) 20 XXXX XXXX",
     social: {
       linkedin: "https://linkedin.com/company/investforward",

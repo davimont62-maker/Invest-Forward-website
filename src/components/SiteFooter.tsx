@@ -25,6 +25,7 @@ export default function SiteFooter() {
             <a href="/services">Services</a>
             <a href="/investors">Investors</a>
             <a href="/opportunities">Opportunities</a>
+            <a href="/news-insights">News & Insights</a>
             <a href="/team">Team</a>
             <a href="/contact">Contact</a>
           </nav>
@@ -38,7 +39,7 @@ export default function SiteFooter() {
         <div className="footer-column footer-contact">
           <h2>Access</h2>
           <p>Detailed information is provided to qualified parties following review.</p>
-          <a className="email-link" href="mailto:enquiries@investforward.com">enquiries@investforward.com</a>
+          <a className="email-link" href="mailto:enquiries@investforward.co.uk">enquiries@investforward.co.uk</a>
         </div>
       </div>
       <div className="container footer-disclaimer">

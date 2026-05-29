@@ -177,7 +177,7 @@ export default function Home() {
                 Share your investor, partner, or project-owner context and the Invest Forward team
                 will review whether there is a suitable basis for a focused conversation.
               </p>
-              <a className="email-link" href="mailto:enquiries@investforward.com">enquiries@investforward.com</a>
+              <a className="email-link" href="mailto:enquiries@investforward.co.uk">enquiries@investforward.co.uk</a>
             </div>
             <form className="contact-form" action="#" method="post">
               <label><span>Name</span><input type="text" name="name" autoComplete="name" required /></label>
