@@ -19,6 +19,7 @@ const founders: Profile[] = [
     initials: "SP",
     name: "Samuele Pozzi",
     position: "Founder / Managing Partner",
+    photo: "/assets/samuele-pozzi.jpg",
     description:
       "Samuele is one of the founding partners at Invest Forward and is involved in all aspects of the business, including origination, portfolio management, and investor relations.",
   },
@@ -26,6 +27,7 @@ const founders: Profile[] = [
     initials: "DM",
     name: "Davide Montini",
     position: "Managing Partner",
+    photo: "/assets/davide-montini.jpg",
     description:
       "Davide is one of the founding partners at Invest Forward. Before his +30 years of investing experience, he had an operational background working with growth businesses across Europe.",
   },
