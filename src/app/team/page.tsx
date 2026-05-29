@@ -66,10 +66,10 @@ export default function TeamPage() {
         <section className="page-hero compact-page-hero">
           <div className="container">
             <p className="eyebrow">Team & advisors</p>
-            <h1>Experienced management, advisors, and country managers.</h1>
+            <h1>Experienced management with European reach.</h1>
             <p>
               Invest Forward combines senior project judgement, sector access, and local execution
-              support around selected investment opportunities.
+              support through relationships and country-level capability across Europe.
             </p>
           </div>
         </section>
@@ -82,7 +82,7 @@ export default function TeamPage() {
             </div>
             <p>
               The core team leads opportunity origination, structuring, investor preparation, and
-              transaction coordination.
+              transaction coordination for selected opportunities across European markets.
             </p>
           </div>
           <div className="container founder-row">
@@ -92,7 +92,7 @@ export default function TeamPage() {
                   {member.photo ? (
                     <img src={member.photo} alt={member.name} />
                   ) : (
-                    <span aria-hidden="true">{member.initials}</span>
+                    <span aria-label={`${member.name} photo pending`}>{member.initials}</span>
                   )}
                 </div>
                 <div>
@@ -109,11 +109,12 @@ export default function TeamPage() {
           <div className="container team-section-heading">
             <div>
               <p className="eyebrow">Advisors and country managers</p>
-              <h2>Specialist support across markets and sectors</h2>
+              <h2>Specialist support across European markets and sectors</h2>
             </div>
             <p>
               Advisors and country managers support local context, sector access, regulatory
-              understanding, and relationship development.
+              understanding, and relationship development across the UK, EU, and selected European
+              jurisdictions.
             </p>
           </div>
           <div className="container advisor-row">
@@ -123,7 +124,7 @@ export default function TeamPage() {
                   {member.photo ? (
                     <img src={member.photo} alt={member.name} />
                   ) : (
-                    <span aria-hidden="true">{member.initials}</span>
+                    <span aria-label={`${member.name} photo pending`}>{member.initials}</span>
                   )}
                 </div>
                 <div>

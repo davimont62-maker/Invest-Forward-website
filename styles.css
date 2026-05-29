@@ -582,8 +582,23 @@ button {
 
 .profile-photo span {
   color: var(--gold);
-  font-size: clamp(1rem, 1.6vw, 1.32rem);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
   font-weight: 650;
+}
+
+.profile-photo span::after {
+  content: "Photo pending";
+  display: block;
+  margin-top: 6px;
+  color: rgba(248, 243, 232, 0.48);
+  font-size: 0.56rem;
+  font-weight: 600;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.team-profile-small .profile-photo span::after {
+  display: none;
 }
 
 .team-profile h2,
