@@ -116,8 +116,8 @@ button {
 }
 
 .brand-logo-image {
-  width: clamp(260px, 22vw, 360px);
-  height: 58px;
+  width: clamp(310px, 26vw, 430px);
+  height: 66px;
   overflow: hidden;
 }
 
@@ -127,7 +127,7 @@ button {
   height: 100%;
   object-fit: contain;
   object-position: left center;
-  filter: brightness(1.72) contrast(1.18) saturate(1.18);
+  filter: brightness(1.08) contrast(1.08);
   mix-blend-mode: screen;
 }
 
@@ -1767,8 +1767,8 @@ textarea:focus {
 }
 
 .site-footer .brand-logo-image {
-  width: 250px;
-  height: 52px;
+  width: 300px;
+  height: 62px;
 }
 
 .site-footer .brand-logo-wordmark {
@@ -2122,8 +2122,8 @@ input::placeholder {
   }
 
   .brand-logo-image {
-    width: min(62vw, 240px);
-    height: 50px;
+    width: min(66vw, 260px);
+    height: 54px;
   }
 
   .brand-logo-wordmark {

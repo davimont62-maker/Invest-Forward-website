@@ -6,7 +6,7 @@ export default function BrandLogo({ variant = "image" }: BrandLogoProps) {
   if (variant === "image") {
     return (
       <span className="brand-logo brand-logo-image" aria-hidden="true">
-        <img src="/assets/invest-forward-logo-cropped.png" alt="" />
+        <img src="/assets/invest-forward-logo-site.png" alt="" />
       </span>
     );
   }
