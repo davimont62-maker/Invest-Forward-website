@@ -15,11 +15,11 @@ const founders = [
       "Davide is one of the founding partners at Invest Forward. Before his 24 years of investing experience, he had an operational background working with growth businesses.",
   },
   {
-    initials: "PD",
-    name: "Project Development Lead",
-    position: "Industrial feasibility & execution preparation",
+    initials: "SP",
+    name: "Samuele Pozzi",
+    position: "Founder / Managing Partner",
     description:
-      "Supports project assessment, feasibility logic, operating plans, stakeholder coordination, and preparation of investment-grade materials.",
+      "Samuele is one of the founding partners at Invest Forward and is involved in all aspects of the business, including origination, portfolio management, and investor relations.",
   },
 ];
 
