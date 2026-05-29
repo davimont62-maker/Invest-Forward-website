@@ -65,7 +65,7 @@ export default function OpportunitiesPage() {
             <div className="portfolio-intro">
               <div>
                 <p className="eyebrow">Current portfolio</p>
-                <h2>Mandates presented selectively</h2>
+                <h2>Selected investment opportunities</h2>
               </div>
               <p>
                 These are not public offers or retail investment listings. Each opportunity is
