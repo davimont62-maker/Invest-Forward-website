@@ -4,6 +4,11 @@ import SiteHeader from "@/components/SiteHeader";
 
 const variants = [
   {
+    id: "image",
+    name: "Supplied PNG",
+    note: "Your supplied rendered logo image, used as the current live header and footer logo.",
+  },
+  {
     id: "splitword",
     name: "Split Wordmark",
     note: "Wider one-line direction with teal Invest, grey V, and a cleaner teal W accent.",

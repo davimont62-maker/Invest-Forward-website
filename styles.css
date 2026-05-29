@@ -115,6 +115,22 @@ button {
   gap: 10px;
 }
 
+.brand-logo-image {
+  width: clamp(172px, 16vw, 244px);
+  height: 46px;
+  overflow: hidden;
+}
+
+.brand-logo-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+  filter: brightness(1.72) contrast(1.18) saturate(1.18);
+  mix-blend-mode: screen;
+}
+
 .brand-logo-wordmark {
   gap: 0;
   align-items: baseline;
@@ -1750,6 +1766,11 @@ textarea:focus {
   font-size: 0.9rem;
 }
 
+.site-footer .brand-logo-image {
+  width: 178px;
+  height: 40px;
+}
+
 .site-footer .brand-logo-wordmark {
   font-size: 1.32rem;
 }
@@ -1841,6 +1862,11 @@ input::placeholder {
 
 .logo-variant-preview .brand-logo-text {
   font-size: clamp(1.48rem, 2.4vw, 2.25rem);
+}
+
+.logo-variant-preview .brand-logo-image {
+  width: min(100%, 420px);
+  height: 72px;
 }
 
 .logo-variant-grid h2 {
@@ -2093,6 +2119,11 @@ input::placeholder {
   .brand-logo-icon {
     width: 32px;
     height: 26px;
+  }
+
+  .brand-logo-image {
+    width: 166px;
+    height: 42px;
   }
 
   .brand-logo-wordmark {
