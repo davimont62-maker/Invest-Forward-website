@@ -414,6 +414,21 @@ button {
   font-size: clamp(1.06rem, 1.6vw, 1.24rem);
 }
 
+.opportunities-hero {
+  padding: 148px 0 clamp(34px, 5vw, 58px);
+}
+
+.opportunities-hero h1 {
+  max-width: 780px;
+  margin-bottom: 18px;
+  font-size: clamp(2.15rem, 4.2vw, 4.1rem);
+}
+
+.opportunities-hero p:not(.eyebrow) {
+  max-width: 720px;
+  font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+}
+
 .editorial-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1600,6 +1615,10 @@ input::placeholder {
 
   .hero-inner {
     padding: 146px 0 86px;
+  }
+
+  .opportunities-hero {
+    padding: 124px 0 34px;
   }
 
   h1 {

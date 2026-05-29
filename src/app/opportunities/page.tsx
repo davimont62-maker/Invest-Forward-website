@@ -50,7 +50,7 @@ export default function OpportunitiesPage() {
     <>
       <SiteHeader />
       <main>
-        <section className="page-hero">
+        <section className="page-hero opportunities-hero">
           <div className="container">
             <p className="eyebrow">Portfolio overview</p>
             <h1>Selected opportunities under confidential review.</h1>
