@@ -4,11 +4,6 @@ import SiteHeader from "@/components/SiteHeader";
 
 const variants = [
   {
-    id: "precise",
-    name: "Precise SVG",
-    note: "Live version: exact icon colours, blue Invest, grey Forward, no raster artefacts.",
-  },
-  {
     id: "image",
     name: "Supplied PNG",
     note: "Your supplied rendered logo image, used as the current live header and footer logo.",
