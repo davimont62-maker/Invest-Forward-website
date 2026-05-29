@@ -1,16 +1,16 @@
 type BrandLogoProps = {
-  variant?: "wordmark" | "momentum" | "axis" | "gateway" | "monogram";
+  variant?: "wordmark" | "splitword" | "momentum" | "axis" | "gateway" | "monogram";
 };
 
-export default function BrandLogo({ variant = "wordmark" }: BrandLogoProps) {
-  if (variant === "wordmark") {
+export default function BrandLogo({ variant = "splitword" }: BrandLogoProps) {
+  if (variant === "wordmark" || variant === "splitword") {
     return (
-      <span className="brand-logo brand-logo-wordmark" aria-hidden="true">
+      <span className={`brand-logo brand-logo-wordmark brand-logo-${variant}`} aria-hidden="true">
         <span className="logo-invest">
           In<span className="logo-v">v</span>est
         </span>
         <span className="logo-forward">
-          For<span className="logo-w">w</span>ard
+          For<span className="logo-w"><span>w</span></span>ard
         </span>
       </span>
     );

@@ -4,6 +4,11 @@ import SiteHeader from "@/components/SiteHeader";
 
 const variants = [
   {
+    id: "splitword",
+    name: "Split Wordmark",
+    note: "Wider one-line direction with teal Invest, grey V, and a cleaner teal W accent.",
+  },
+  {
     id: "wordmark",
     name: "Teal Wordmark",
     note: "Closest to your reference: stronger Invest, lighter Forward, with V/W accent details.",

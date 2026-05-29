@@ -126,6 +126,11 @@ button {
   font-weight: 300;
 }
 
+.brand-logo-splitword {
+  font-size: clamp(1.58rem, 1.95vw, 2.22rem);
+  letter-spacing: -0.055em;
+}
+
 .logo-invest {
   color: #35b5c6;
   font-weight: 800;
@@ -147,16 +152,32 @@ button {
   font-weight: 300;
 }
 
+.brand-logo-splitword .logo-v {
+  margin-inline: -0.05em -0.03em;
+  color: rgba(239, 228, 209, 0.7);
+  transform: skew(-10deg);
+}
+
+.logo-w {
+  color: #35b5c6;
+}
+
+.logo-w span {
+  position: relative;
+  z-index: 1;
+}
+
 .logo-w::after {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 0.08em;
-  width: 2px;
-  height: 0.88em;
-  background: #35b5c6;
-  transform: translateX(-50%) skew(-14deg);
-  opacity: 0.95;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0 34%, rgba(239, 228, 209, 0.74) 34% 62%, transparent 62%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brand-logo-splitword .logo-w::after {
+  background: linear-gradient(90deg, transparent 0 38%, rgba(239, 228, 209, 0.74) 38% 58%, transparent 58%);
 }
 
 .brand-logo-icon {
@@ -1733,6 +1754,10 @@ textarea:focus {
   font-size: 1.32rem;
 }
 
+.site-footer .brand-logo-splitword {
+  font-size: 1.44rem;
+}
+
 .footer-column h2 {
   margin: 0 0 12px;
   color: rgba(248, 243, 232, 0.74);
@@ -2072,6 +2097,10 @@ input::placeholder {
 
   .brand-logo-wordmark {
     font-size: 1.28rem;
+  }
+
+  .brand-logo-splitword {
+    font-size: 1.2rem;
   }
 
   .brand-logo-text {
