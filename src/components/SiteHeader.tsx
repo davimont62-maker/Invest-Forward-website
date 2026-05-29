@@ -64,7 +64,9 @@ export default function SiteHeader() {
       </button>
       <nav className="site-nav" id="site-nav" aria-label="Primary navigation">
         {navItems.map(([label, href]) => (
-          <a href={href} key={href}>{label}</a>
+          <a className={href === "/opportunities" ? "nav-featured" : undefined} href={href} key={href}>
+            {label}
+          </a>
         ))}
       </nav>
     </header>
