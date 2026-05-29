@@ -461,6 +461,113 @@ button {
   min-height: 440px;
 }
 
+.portfolio-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.8fr);
+  gap: clamp(28px, 7vw, 82px);
+  align-items: end;
+  margin-bottom: clamp(34px, 5vw, 58px);
+}
+
+.portfolio-intro h2,
+.portfolio-intro p {
+  margin-bottom: 0;
+}
+
+.portfolio-intro > p {
+  color: var(--soft);
+  font-size: 1.04rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.07)),
+    rgba(255, 255, 255, 0.04);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(200, 168, 106, 0.38);
+}
+
+.portfolio-card h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.52rem, 2.2vw, 2.14rem);
+}
+
+.portfolio-card > p:not(.confidential-note) {
+  color: var(--soft);
+  font-size: 0.98rem;
+}
+
+.focus-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.focus-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid rgba(200, 168, 106, 0.28);
+  border-radius: var(--radius);
+  background: rgba(200, 168, 106, 0.08);
+  color: var(--soft);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.portfolio-card .confidential-note {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.opportunity-access-section {
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.024);
+}
+
+.opportunity-access {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: clamp(30px, 5vw, 58px);
+  border: 1px solid rgba(77, 183, 255, 0.22);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(77, 183, 255, 0.12), rgba(200, 168, 106, 0.08)),
+    rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+}
+
+.opportunity-access h2 {
+  max-width: 780px;
+}
+
+.opportunity-access p:not(.eyebrow) {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--soft);
+}
+
 .network-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
@@ -1306,7 +1413,8 @@ input::placeholder {
   .why-grid,
   .selected-projects-grid,
   .sector-list,
-  .editorial-grid {
+  .editorial-grid,
+  .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1372,6 +1480,8 @@ input::placeholder {
   .gc-intro-grid,
   .gc-section-split,
   .gc-pathway-grid,
+  .portfolio-intro,
+  .opportunity-access,
   .network-panel,
   .audience-grid,
   .investor-panel,
@@ -1434,6 +1544,7 @@ input::placeholder {
   .editorial-grid,
   .sector-list,
   .confidential-grid,
+  .portfolio-grid,
   .service-grid,
   .process-list,
   .team-grid,
