@@ -8,11 +8,11 @@ export const metadata = {
 
 const founders = [
   {
-    initials: "IF",
-    name: "Founder / Managing Partner",
-    position: "Strategic project development & capital introduction",
+    initials: "DM",
+    name: "Davide Montini",
+    position: "Managing Partner",
     description:
-      "Leads opportunity origination, project positioning, investor preparation, and relationship-led introductions across selected real-economy sectors.",
+      "Davide is one of the founding partners at Invest Forward. Before his 24 years of investing experience, he had an operational background working with growth businesses.",
   },
   {
     initials: "PD",
