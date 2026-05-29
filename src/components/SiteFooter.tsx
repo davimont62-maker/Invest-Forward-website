@@ -1,14 +1,12 @@
+import BrandLogo from "@/components/BrandLogo";
+
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container footer-layout">
         <div className="footer-brand">
           <a className="brand" href="/" aria-label="Invest Forward home">
-            <span className="brand-mark">IF</span>
-            <span className="brand-wordmark">
-              <span>Invest</span>
-              <span>Forward</span>
-            </span>
+            <BrandLogo />
           </a>
           <p>
             Boutique strategic project development and capital introduction across selected

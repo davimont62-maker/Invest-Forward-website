@@ -1,5 +1,6 @@
 "use client";
 
+import BrandLogo from "@/components/BrandLogo";
 import { useEffect } from "react";
 
 const navItems = [
@@ -51,11 +52,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header" data-header>
       <a className="brand" href="/" aria-label="Invest Forward home">
-        <span className="brand-mark">IF</span>
-        <span className="brand-wordmark">
-          <span>Invest</span>
-          <span>Forward</span>
-        </span>
+        <BrandLogo />
       </a>
       <button className="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span>
