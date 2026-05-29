@@ -1,26 +1,24 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { siteConfig } from '@/config/site';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} - ${siteConfig.description}`,
-  description: siteConfig.description,
+  title: 'Invest Forward | Strategic Ventures & Investment Opportunities',
+  description:
+    'Invest Forward originates, structures and presents strategic ventures and scalable projects for investors, operating partners and growth capital.',
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
+    title: 'Invest Forward',
+    description:
+      'Strategic ventures and investment opportunities prepared for investors, operating partners and growth capital.',
+    siteName: 'Invest Forward',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'Invest Forward',
+    description: 'Strategic ventures and investment opportunities.',
   },
 };
 
@@ -31,13 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Navigation />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
