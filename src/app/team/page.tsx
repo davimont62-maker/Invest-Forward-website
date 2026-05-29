@@ -16,18 +16,18 @@ type Profile = {
 
 const founders: Profile[] = [
   {
-    initials: "DM",
-    name: "Davide Montini",
-    position: "Managing Partner",
-    description:
-      "Davide is one of the founding partners at Invest Forward. Before his 24 years of investing experience, he had an operational background working with growth businesses.",
-  },
-  {
     initials: "SP",
     name: "Samuele Pozzi",
     position: "Founder / Managing Partner",
     description:
       "Samuele is one of the founding partners at Invest Forward and is involved in all aspects of the business, including origination, portfolio management, and investor relations.",
+  },
+  {
+    initials: "DM",
+    name: "Davide Montini",
+    position: "Managing Partner",
+    description:
+      "Davide is one of the founding partners at Invest Forward. Before his +30 years of investing experience, he had an operational background working with growth businesses across Europe.",
   },
 ];
 
