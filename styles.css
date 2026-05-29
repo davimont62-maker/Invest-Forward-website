@@ -115,6 +115,49 @@ button {
   gap: 10px;
 }
 
+.brand-logo-precise {
+  gap: 12px;
+}
+
+.precise-mark {
+  width: clamp(86px, 7vw, 118px);
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.mark-dark {
+  fill: #1f5f86;
+}
+
+.mark-blue {
+  fill: #55b9ce;
+}
+
+.mark-divider {
+  stroke: rgba(218, 214, 206, 0.72);
+  stroke-width: 2;
+}
+
+.precise-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.52rem, 1.8vw, 2.08rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.precise-invest {
+  color: #55b9ce;
+  font-weight: 800;
+}
+
+.precise-forward {
+  color: rgba(224, 218, 210, 0.9);
+  font-weight: 300;
+}
+
 .brand-logo-image {
   width: clamp(330px, 28vw, 460px);
   height: 72px;
@@ -1771,6 +1814,14 @@ textarea:focus {
   height: 66px;
 }
 
+.site-footer .precise-mark {
+  width: 88px;
+}
+
+.site-footer .precise-wordmark {
+  font-size: 1.38rem;
+}
+
 .site-footer .brand-logo-wordmark {
   font-size: 1.32rem;
 }
@@ -1867,6 +1918,14 @@ input::placeholder {
 .logo-variant-preview .brand-logo-image {
   width: min(100%, 520px);
   height: 92px;
+}
+
+.logo-variant-preview .precise-mark {
+  width: 118px;
+}
+
+.logo-variant-preview .precise-wordmark {
+  font-size: clamp(1.72rem, 2.6vw, 2.5rem);
 }
 
 .logo-variant-grid h2 {
@@ -2124,6 +2183,14 @@ input::placeholder {
   .brand-logo-image {
     width: min(66vw, 260px);
     height: 54px;
+  }
+
+  .precise-mark {
+    width: 70px;
+  }
+
+  .precise-wordmark {
+    font-size: 1.28rem;
   }
 
   .brand-logo-wordmark {

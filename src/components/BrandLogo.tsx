@@ -1,8 +1,26 @@
 type BrandLogoProps = {
-  variant?: "image" | "wordmark" | "splitword" | "momentum" | "axis" | "gateway" | "monogram";
+  variant?: "precise" | "image" | "wordmark" | "splitword" | "momentum" | "axis" | "gateway" | "monogram";
 };
 
-export default function BrandLogo({ variant = "image" }: BrandLogoProps) {
+export default function BrandLogo({ variant = "precise" }: BrandLogoProps) {
+  if (variant === "precise") {
+    return (
+      <span className="brand-logo brand-logo-precise" aria-hidden="true">
+        <svg className="precise-mark" viewBox="0 0 92 52" role="img">
+          <path className="mark-dark" d="M3 5h16v42H3z" />
+          <path className="mark-blue" d="M24 5h58L71 18H29z" />
+          <path className="mark-blue" d="M24 24h44l10 8-10 8H34l-6 7H14z" />
+          <path className="mark-blue" d="M60 24h18l-10 8z" />
+          <path className="mark-divider" d="M90 0v52" />
+        </svg>
+        <span className="precise-wordmark">
+          <span className="precise-invest">Invest</span>
+          <span className="precise-forward">Forward</span>
+        </span>
+      </span>
+    );
+  }
+
   if (variant === "image") {
     return (
       <span className="brand-logo brand-logo-image" aria-hidden="true">
