@@ -38,17 +38,27 @@ export default function NewsInsightsPage() {
             <div className="insights-grid">
               {newsInsights.map((item) => (
                 <article className="insight-card" key={item.id}>
-                  <div className="card-topline">
-                    <span>{item.type}</span>
-                    <span>
-                      {item.date} / {item.readTime}
-                    </span>
+                  <div className="insight-card-media">
+                    <img
+                      src="/assets/invest-forward-hero.png"
+                      alt=""
+                      aria-hidden="true"
+                      style={{ objectPosition: item.imagePosition }}
+                    />
                   </div>
-                  <h2>{item.title}</h2>
-                  <p>{item.excerpt}</p>
-                  <a href="#" aria-label={`Read ${item.title}`}>
-                    Read note
-                  </a>
+                  <div className="insight-card-body">
+                    <div className="card-topline">
+                      <span>{item.type}</span>
+                      <span>
+                        {item.date} / {item.readTime}
+                      </span>
+                    </div>
+                    <h2>{item.title}</h2>
+                    <p>{item.excerpt}</p>
+                    <a href="#" aria-label={`Read ${item.title}`}>
+                      Read note
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>

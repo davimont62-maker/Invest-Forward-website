@@ -7,6 +7,7 @@ export const newsInsights = [
       "Why project quality, structured presentation, and qualified investor access matter when capital is more selective.",
     date: "2026-05-29",
     readTime: "4 min read",
+    imagePosition: "50% 44%",
   },
   {
     id: "investment-memorandum-discipline",
@@ -16,6 +17,7 @@ export const newsInsights = [
       "A concise investment memorandum can help align project owners, strategic partners, and qualified investors around the same facts.",
     date: "2026-05-29",
     readTime: "5 min read",
+    imagePosition: "66% 40%",
   },
   {
     id: "cross-border-execution",
@@ -25,5 +27,16 @@ export const newsInsights = [
       "Selected industrial, energy, and technology opportunities often require early alignment across commercial, regulatory, and investor-facing workstreams.",
     date: "2026-05-29",
     readTime: "3 min read",
+    imagePosition: "78% 48%",
+  },
+  {
+    id: "qualified-access",
+    type: "Insight",
+    title: "Confidential access and qualification in private opportunity review",
+    excerpt:
+      "How controlled information flow, qualification, and relationship-led introductions support a more serious review process.",
+    date: "2026-05-29",
+    readTime: "4 min read",
+    imagePosition: "36% 42%",
   },
 ];
