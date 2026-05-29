@@ -6,7 +6,15 @@ export const metadata = {
   description: "Invest Forward management team, advisors, and country managers.",
 };
 
-const founders = [
+type Profile = {
+  initials: string;
+  name: string;
+  position: string;
+  description: string;
+  photo?: string;
+};
+
+const founders: Profile[] = [
   {
     initials: "DM",
     name: "Davide Montini",
@@ -23,7 +31,7 @@ const founders = [
   },
 ];
 
-const advisors = [
+const advisors: Profile[] = [
   {
     initials: "EU",
     name: "European Advisor",
@@ -80,8 +88,12 @@ export default function TeamPage() {
           <div className="container founder-row">
             {founders.map((member) => (
               <article className="team-profile team-profile-large" key={member.name}>
-                <div className="profile-photo" aria-hidden="true">
-                  <span>{member.initials}</span>
+                <div className="profile-photo">
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} />
+                  ) : (
+                    <span aria-hidden="true">{member.initials}</span>
+                  )}
                 </div>
                 <div>
                   <h2>{member.name}</h2>
@@ -107,8 +119,12 @@ export default function TeamPage() {
           <div className="container advisor-row">
             {advisors.map((member) => (
               <article className="team-profile team-profile-small" key={member.name}>
-                <div className="profile-photo" aria-hidden="true">
-                  <span>{member.initials}</span>
+                <div className="profile-photo">
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} />
+                  ) : (
+                    <span aria-hidden="true">{member.initials}</span>
+                  )}
                 </div>
                 <div>
                   <h3>{member.name}</h3>
