@@ -5,20 +5,20 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Invest Forward | Strategic Ventures & Investment Opportunities',
+  title: 'Invest Forward | Strategic Project Development & Capital Introduction',
   description:
-    'Invest Forward originates, structures and presents strategic ventures and scalable projects for investors, operating partners and growth capital.',
+    'Invest Forward develops, structures, and presents selected investment opportunities across industrial, energy, technology, and infrastructure sectors.',
   openGraph: {
     title: 'Invest Forward',
     description:
-      'Strategic ventures and investment opportunities prepared for investors, operating partners and growth capital.',
+      'Strategic project development and capital introduction for qualified investors, strategic partners, and family offices.',
     siteName: 'Invest Forward',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Invest Forward',
-    description: 'Strategic ventures and investment opportunities.',
+    description: 'Strategic project development and capital introduction.',
   },
 };
 
