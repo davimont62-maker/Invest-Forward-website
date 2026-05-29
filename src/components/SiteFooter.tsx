@@ -14,6 +14,10 @@ export default function SiteFooter() {
             Boutique strategic project development and capital introduction across selected
             real-economy sectors.
           </p>
+          <address>
+            Suite 2a, 95 Wilton Road<br />
+            London, England, SW1V 1BZ
+          </address>
         </div>
 
         <div className="footer-column">
