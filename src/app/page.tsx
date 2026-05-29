@@ -84,60 +84,73 @@ export default function Home() {
         </section>
 
         <section className="section track-section" id="track-record">
-          <div className="container section-heading">
-            <p className="eyebrow">Credibility</p>
-            <h2>Track Record</h2>
-          </div>
-          <div className="container credibility-grid">
-            {trackRecord.map(([value, label]) => (
-              <article key={label}>
-                <strong>{value}</strong>
-                <h3>{label}</h3>
-              </article>
-            ))}
+          <div className="container track-editorial">
+            <div>
+              <p className="eyebrow">Credibility</p>
+              <h2>Track Record</h2>
+            </div>
+            <dl className="track-metrics">
+              {trackRecord.map(([value, label]) => (
+                <div key={label}>
+                  <dt>{value}</dt>
+                  <dd>{label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
         <section className="section gc-process" id="process">
-          <div className="container section-heading">
-            <p className="eyebrow">Approach</p>
-            <h2>How We Work</h2>
+          <div className="container process-editorial">
+            <div>
+              <p className="eyebrow">Approach</p>
+              <h2>How We Work</h2>
+            </div>
+            <p>
+              A disciplined process from initial review through investor preparation, controlled
+              introductions, diligence coordination, and transaction communication.
+            </p>
           </div>
-          <div className="container gc-process-list">
+          <ol className="container process-timeline">
             {process.map(([number, title, copy]) => (
-              <article key={title}>
+              <li key={title}>
                 <span>{number}</span>
-                <h3>{title}</h3>
+                <strong>{title}</strong>
                 <p>{copy}</p>
-              </article>
+              </li>
             ))}
-          </div>
+          </ol>
         </section>
 
         <section className="section investors-section" id="why">
-          <div className="container section-heading">
-            <p className="eyebrow">Value proposition</p>
-            <h2>Why Invest Forward</h2>
-          </div>
-          <div className="container why-grid home-value-grid">
-            {values.map((value) => (
-              <article key={value}>
-                <span></span>
-                <h3>{value}</h3>
-              </article>
-            ))}
+          <div className="container why-editorial">
+            <div>
+              <p className="eyebrow">Value proposition</p>
+              <h2>Why Invest Forward</h2>
+              <p>
+                A selective platform for real-economy opportunities where structured presentation,
+                relationship access, and cross-border judgement matter.
+              </p>
+            </div>
+            <ul>
+              {values.map((value) => (
+                <li key={value}>{value}</li>
+              ))}
+            </ul>
           </div>
         </section>
 
         <section className="section gc-themes" id="sectors">
-          <div className="container section-heading">
-            <p className="eyebrow">Sectors</p>
-            <h2>Focused real-economy coverage.</h2>
-          </div>
-          <div className="container sector-list">
-            {sectors.map((sector) => (
-              <article key={sector}>{sector}</article>
-            ))}
+          <div className="container sector-band">
+            <div>
+              <p className="eyebrow">Sectors</p>
+              <h2>Focused real-economy coverage.</h2>
+            </div>
+            <div className="sector-list-inline">
+              {sectors.map((sector) => (
+                <span key={sector}>{sector}</span>
+              ))}
+            </div>
           </div>
         </section>
 
