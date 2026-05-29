@@ -84,10 +84,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(20px, 3vw, 42px);
+  gap: clamp(24px, 3.5vw, 50px);
   width: min(100% - 48px, calc(var(--max) + 72px));
-  min-height: 82px;
-  padding: 12px 24px;
+  min-height: 92px;
+  padding: 14px 28px;
   border-bottom: 1px solid transparent;
   transform: translateX(-50%);
   transition: background 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease, box-shadow 180ms ease;
@@ -104,7 +104,7 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: var(--ink);
   font-weight: 700;
   white-space: nowrap;
@@ -113,8 +113,8 @@ button {
 .brand-mark {
   display: inline-grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border: 1px solid rgba(201, 165, 97, 0.62);
   background: linear-gradient(145deg, rgba(201, 165, 97, 0.25), rgba(123, 46, 53, 0.16));
   color: var(--gold);
@@ -128,8 +128,8 @@ button {
   gap: 0;
   color: var(--ink);
   font-family: var(--font-display), Georgia, serif;
-  font-size: clamp(1.24rem, 1.45vw, 1.55rem);
-  line-height: 0.88;
+  font-size: clamp(1.36rem, 1.55vw, 1.72rem);
+  line-height: 0.9;
   letter-spacing: 0;
 }
 
@@ -146,10 +146,10 @@ button {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 1.25vw, 22px);
+  gap: clamp(18px, 1.55vw, 28px);
   color: var(--soft);
-  font-size: clamp(0.82rem, 0.78vw, 0.92rem);
-  font-weight: 650;
+  font-size: clamp(0.96rem, 0.9vw, 1.06rem);
+  font-weight: 680;
 }
 
 .site-nav a {
@@ -426,8 +426,9 @@ button {
 .page-hero h1 {
   max-width: 820px;
   margin-bottom: 14px;
-  font-size: clamp(1.85rem, 3.4vw, 3.25rem);
-  line-height: 1.08;
+  font-size: clamp(1.72rem, 2.75vw, 2.72rem);
+  line-height: 1.1;
+  font-weight: 500;
 }
 
 .page-hero p:not(.eyebrow) {
@@ -447,9 +448,9 @@ button {
 .opportunities-hero h1 {
   max-width: 760px;
   margin-bottom: 12px;
-  font-size: clamp(1.8rem, 3.15vw, 3.15rem);
-  line-height: 1.06;
-  font-weight: 600;
+  font-size: clamp(1.7rem, 2.55vw, 2.52rem);
+  line-height: 1.1;
+  font-weight: 500;
 }
 
 .opportunities-hero p:not(.eyebrow) {
@@ -498,10 +499,10 @@ button {
 
 .team-section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 0.68fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 0.9fr);
   gap: clamp(24px, 5vw, 64px);
   align-items: end;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .team-section-heading h2,
@@ -517,7 +518,7 @@ button {
 .founder-row,
 .advisor-row {
   display: grid;
-  gap: 16px;
+  gap: clamp(22px, 3vw, 42px);
 }
 
 .founder-row {
@@ -529,50 +530,52 @@ button {
 }
 
 .team-profile {
-  border: 1px solid rgba(201, 165, 97, 0.2);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(180deg, rgba(251, 247, 239, 0.13), rgba(251, 247, 239, 0.07)),
-    rgba(12, 20, 28, 0.28);
-  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+  position: relative;
 }
 
 .team-profile-large {
   display: grid;
-  grid-template-columns: minmax(118px, 0.38fr) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(132px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 32px);
   align-items: center;
-  min-height: 230px;
-  padding: clamp(20px, 3vw, 30px);
+  min-height: 190px;
+  padding: 0 clamp(18px, 2.4vw, 30px) 0 0;
+}
+
+.team-profile-large + .team-profile-large {
+  padding-left: clamp(18px, 2.4vw, 30px);
+  border-left: 1px solid rgba(201, 165, 97, 0.24);
 }
 
 .team-profile-small {
-  min-height: 250px;
-  padding: 20px;
+  min-height: 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(201, 165, 97, 0.22);
 }
 
 .profile-photo {
   display: grid;
   place-items: center;
-  aspect-ratio: 4 / 5;
-  min-height: 150px;
-  border: 1px solid rgba(200, 168, 106, 0.34);
-  border-radius: var(--radius);
+  width: 132px;
+  height: 164px;
+  border: 1px solid rgba(200, 168, 106, 0.28);
+  border-radius: 2px;
   background:
-    linear-gradient(145deg, rgba(200, 168, 106, 0.18), rgba(77, 183, 255, 0.1)),
-    rgba(255, 255, 255, 0.07);
+    linear-gradient(145deg, rgba(200, 168, 106, 0.16), rgba(123, 46, 53, 0.1)),
+    rgba(255, 255, 255, 0.045);
 }
 
 .team-profile-small .profile-photo {
-  min-height: 116px;
+  width: 72px;
+  height: 72px;
   margin-bottom: 16px;
-  aspect-ratio: 16 / 10;
+  border-radius: 50%;
 }
 
 .profile-photo span {
   color: var(--gold);
-  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-  font-weight: 720;
+  font-size: clamp(1rem, 1.6vw, 1.32rem);
+  font-weight: 650;
 }
 
 .team-profile h2,
@@ -584,7 +587,7 @@ button {
   margin-bottom: 12px;
   color: var(--gold);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 680;
   line-height: 1.35;
   text-transform: uppercase;
 }
@@ -906,26 +909,26 @@ p {
 h1 {
   max-width: 860px;
   margin-bottom: 18px;
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1.06;
+  font-size: clamp(1.96rem, 3.25vw, 3.35rem);
+  line-height: 1.09;
   letter-spacing: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h2 {
   margin-bottom: 14px;
-  font-size: clamp(1.45rem, 2.25vw, 2.35rem);
-  line-height: 1.12;
+  font-size: clamp(1.32rem, 1.86vw, 1.98rem);
+  line-height: 1.16;
   letter-spacing: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h3 {
   margin-bottom: 8px;
-  font-size: clamp(1rem, 1.35vw, 1.18rem);
-  line-height: 1.24;
+  font-size: clamp(0.98rem, 1.18vw, 1.1rem);
+  line-height: 1.28;
   letter-spacing: 0;
-  font-weight: 650;
+  font-weight: 550;
 }
 
 p {
@@ -1644,8 +1647,8 @@ input::placeholder {
 
 @media (max-width: 1040px) {
   .site-nav {
-    gap: 12px;
-    font-size: 0.82rem;
+    gap: 14px;
+    font-size: 0.92rem;
   }
 
   .gc-opportunity-grid,
@@ -1691,18 +1694,18 @@ input::placeholder {
 @media (max-width: 820px) {
   .site-header {
     width: min(100% - 28px, calc(var(--max) + 72px));
-    min-height: 74px;
-    padding: 10px 6px;
+    min-height: 80px;
+    padding: 12px 10px;
   }
 
   .brand-mark {
-    width: 44px;
-    height: 44px;
-    font-size: 0.78rem;
+    width: 48px;
+    height: 48px;
+    font-size: 0.8rem;
   }
 
   .brand-wordmark {
-    font-size: 1.16rem;
+    font-size: 1.24rem;
   }
 
   .menu-toggle {
@@ -1731,6 +1734,7 @@ input::placeholder {
 
   .site-nav a {
     padding: 12px;
+    font-size: 1rem;
   }
 
   .hero {
@@ -1802,11 +1806,11 @@ input::placeholder {
   }
 
   .opportunities-hero h1 {
-    font-size: clamp(1.72rem, 8vw, 2.6rem);
+    font-size: clamp(1.58rem, 7vw, 2.2rem);
   }
 
   h1 {
-    font-size: clamp(1.9rem, 9vw, 3rem);
+    font-size: clamp(1.72rem, 8vw, 2.48rem);
   }
 
   .hero-actions,
@@ -1849,6 +1853,24 @@ input::placeholder {
     min-height: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .team-profile-large {
+    grid-template-columns: 104px minmax(0, 1fr);
+    min-height: 0;
+    padding: 0;
+  }
+
+  .team-profile-large + .team-profile-large {
+    padding-left: 0;
+    padding-top: 22px;
+    border-left: 0;
+    border-top: 1px solid rgba(201, 165, 97, 0.22);
+  }
+
+  .profile-photo {
+    width: 104px;
+    height: 128px;
   }
 
   .gc-theme-grid article:last-child {

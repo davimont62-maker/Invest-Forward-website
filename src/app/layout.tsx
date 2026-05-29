@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import { Manrope, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
 
-const display = Cormorant_Garamond({
+const display = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  weight: ['400', '500', '600'],
   variable: '--font-display',
 });
 
