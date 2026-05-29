@@ -1,8 +1,21 @@
 type BrandLogoProps = {
-  variant?: "momentum" | "axis" | "gateway" | "monogram";
+  variant?: "wordmark" | "momentum" | "axis" | "gateway" | "monogram";
 };
 
-export default function BrandLogo({ variant = "momentum" }: BrandLogoProps) {
+export default function BrandLogo({ variant = "wordmark" }: BrandLogoProps) {
+  if (variant === "wordmark") {
+    return (
+      <span className="brand-logo brand-logo-wordmark" aria-hidden="true">
+        <span className="logo-invest">
+          In<span className="logo-v">v</span>est
+        </span>
+        <span className="logo-forward">
+          For<span className="logo-w">w</span>ard
+        </span>
+      </span>
+    );
+  }
+
   return (
     <span className={`brand-logo brand-logo-${variant}`} aria-hidden="true">
       <span className="brand-logo-icon">

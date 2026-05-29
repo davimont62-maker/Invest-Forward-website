@@ -4,6 +4,11 @@ import SiteHeader from "@/components/SiteHeader";
 
 const variants = [
   {
+    id: "wordmark",
+    name: "Teal Wordmark",
+    note: "Closest to your reference: stronger Invest, lighter Forward, with V/W accent details.",
+  },
+  {
     id: "momentum",
     name: "Momentum",
     note: "Closest to the reference: compact screen mark with a forward growth line.",

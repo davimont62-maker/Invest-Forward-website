@@ -115,6 +115,50 @@ button {
   gap: 10px;
 }
 
+.brand-logo-wordmark {
+  gap: 0;
+  align-items: baseline;
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.46rem, 1.75vw, 2rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  font-weight: 300;
+}
+
+.logo-invest {
+  color: #35b5c6;
+  font-weight: 800;
+}
+
+.logo-forward {
+  color: rgba(239, 228, 209, 0.74);
+  font-weight: 300;
+}
+
+.logo-v,
+.logo-w {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-v {
+  color: rgba(239, 228, 209, 0.74);
+  font-weight: 300;
+}
+
+.logo-w::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.08em;
+  width: 2px;
+  height: 0.88em;
+  background: #35b5c6;
+  transform: translateX(-50%) skew(-14deg);
+  opacity: 0.95;
+}
+
 .brand-logo-icon {
   display: inline-grid;
   place-items: center;
@@ -1685,6 +1729,10 @@ textarea:focus {
   font-size: 0.9rem;
 }
 
+.site-footer .brand-logo-wordmark {
+  font-size: 1.32rem;
+}
+
 .footer-column h2 {
   margin: 0 0 12px;
   color: rgba(248, 243, 232, 0.74);
@@ -2020,6 +2068,10 @@ input::placeholder {
   .brand-logo-icon {
     width: 32px;
     height: 26px;
+  }
+
+  .brand-logo-wordmark {
+    font-size: 1.28rem;
   }
 
   .brand-logo-text {
