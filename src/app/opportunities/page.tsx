@@ -53,11 +53,10 @@ export default function OpportunitiesPage() {
         <section className="page-hero opportunities-hero">
           <div className="container">
             <p className="eyebrow">Portfolio overview</p>
-            <h1>Selected opportunities under confidential review.</h1>
+            <h1>Active investment opportunities</h1>
             <p>
-              Invest Forward maintains a focused portfolio of selected real-economy opportunities.
-              The overview below is intentionally limited; detailed information is provided only to
-              qualified parties following review and, where appropriate, confidentiality arrangements.
+              Selected real-economy opportunities under confidential review. Detailed information is
+              provided only to qualified parties following registration and review.
             </p>
           </div>
         </section>
@@ -66,12 +65,11 @@ export default function OpportunitiesPage() {
             <div className="portfolio-intro">
               <div>
                 <p className="eyebrow">Current portfolio</p>
-                <h2>A small number of active mandates, presented selectively.</h2>
+                <h2>Mandates presented selectively</h2>
               </div>
               <p>
                 These are not public offers or retail investment listings. Each opportunity is
-                assessed, structured, and introduced through a relationship-led process with
-                professional counterparties.
+                introduced through a relationship-led process with professional counterparties.
               </p>
             </div>
 
