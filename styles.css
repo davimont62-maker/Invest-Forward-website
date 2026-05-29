@@ -568,6 +568,81 @@ button {
   color: var(--soft);
 }
 
+.opportunity-detail,
+.teaser-registration {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+  gap: clamp(34px, 8vw, 96px);
+  align-items: start;
+}
+
+.opportunity-detail > div > p {
+  max-width: 760px;
+  color: var(--soft);
+  font-size: 1.04rem;
+}
+
+.opportunity-snapshot {
+  padding: clamp(24px, 4vw, 34px);
+  border: 1px solid rgba(200, 168, 106, 0.3);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(200, 168, 106, 0.12), rgba(77, 183, 255, 0.07)),
+    rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+}
+
+.teaser-registration {
+  padding: clamp(30px, 5vw, 58px);
+  border: 1px solid rgba(77, 183, 255, 0.22);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(77, 183, 255, 0.12), rgba(200, 168, 106, 0.08)),
+    rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+}
+
+.teaser-registration > div > p {
+  max-width: 680px;
+  color: var(--soft);
+}
+
+.thesis-list {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thesis-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--soft);
+}
+
+.thesis-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--gold);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.form-wide,
+.form-note {
+  grid-column: 1 / -1;
+}
+
+.form-note {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.68);
+  font-size: 0.8rem;
+}
+
 .network-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
@@ -1482,6 +1557,8 @@ input::placeholder {
   .gc-pathway-grid,
   .portfolio-intro,
   .opportunity-access,
+  .opportunity-detail,
+  .teaser-registration,
   .network-panel,
   .audience-grid,
   .investor-panel,

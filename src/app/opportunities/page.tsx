@@ -8,15 +8,16 @@ export const metadata = {
 
 const opportunities = [
   {
-    title: "Defense Manufacturing Expansion",
-    sector: "Defence / Security",
-    geography: "Europe",
-    stage: "Development",
+    title: "Gunpowder Project - Vegetable Charcoal",
+    sector: "Strategic Materials",
+    geography: "Serbia / Europe",
+    stage: "Seed launch",
     status: "Active",
-    requirement: "Strategic investors and industrial partners",
+    requirement: "EUR 1.0m seed startup capital",
     summary:
-      "Expansion-led manufacturing opportunity with European market relevance, requiring structured presentation, partner qualification, and controlled investor engagement.",
-    focus: ["Industrial capacity", "European positioning", "Regulatory interface"],
+      "Specialty technical-charcoal platform designed to serve industrial, pyrotechnic, and energetic-material supply chains with controlled production, QA, and traceability.",
+    focus: ["150-300 t ramp", "Serbian production base", "Controlled technical carbon"],
+    href: "/opportunities/gunpowder-project",
   },
   {
     title: "Industrial Manufacturing Platform",
@@ -28,6 +29,7 @@ const opportunities = [
     summary:
       "Operating industrial platform with scope for cross-border commercial development, strategic capital, and partner-led market expansion.",
     focus: ["Growth capital", "Distribution access", "Operational scaling"],
+    href: "/contact",
   },
   {
     title: "Technology Platform Development",
@@ -39,6 +41,7 @@ const opportunities = [
     summary:
       "Software platform opportunity under structured review, with emphasis on business model positioning, investor materials, and strategic capital introduction.",
     focus: ["SaaS positioning", "Investor materials", "Strategic partnerships"],
+    href: "/contact",
   },
 ];
 
@@ -94,6 +97,9 @@ export default function OpportunitiesPage() {
                   <p className="confidential-note">
                     Information available to qualified parties upon request.
                   </p>
+                  <a className="text-link" href={opportunity.href}>
+                    Request teaser access
+                  </a>
                 </article>
               ))}
             </div>
