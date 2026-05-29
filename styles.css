@@ -116,8 +116,8 @@ button {
 }
 
 .brand-logo-image {
-  width: clamp(310px, 26vw, 430px);
-  height: 66px;
+  width: clamp(330px, 28vw, 460px);
+  height: 72px;
   overflow: hidden;
 }
 
@@ -127,7 +127,7 @@ button {
   height: 100%;
   object-fit: contain;
   object-position: left center;
-  filter: brightness(1.08) contrast(1.08);
+  filter: brightness(1.02) contrast(1.04);
   mix-blend-mode: screen;
 }
 
@@ -1767,8 +1767,8 @@ textarea:focus {
 }
 
 .site-footer .brand-logo-image {
-  width: 300px;
-  height: 62px;
+  width: 320px;
+  height: 66px;
 }
 
 .site-footer .brand-logo-wordmark {
