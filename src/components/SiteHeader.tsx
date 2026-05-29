@@ -8,7 +8,7 @@ const navItems = [
   ["Services", "/services"],
   ["Investors", "/investors"],
   ["Opportunities", "/opportunities"],
-  ["Team", "/#team"],
+  ["Team", "/team"],
   ["Contact", "/contact"],
 ];
 

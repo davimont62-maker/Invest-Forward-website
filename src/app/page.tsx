@@ -151,6 +151,7 @@ export default function Home() {
               Invest Forward brings together senior management, project advisors, sector specialists,
               and investment-preparation partners around selected opportunities.
             </p>
+            <a className="text-link" href="/team">View team and advisors</a>
           </div>
         </section>
 

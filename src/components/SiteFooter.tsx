@@ -17,6 +17,7 @@ export default function SiteFooter() {
           <a href="/services">Services</a>
           <a href="/investors">Investors</a>
           <a href="/opportunities">Opportunities</a>
+          <a href="/team">Team</a>
           <a href="/contact">Contact</a>
         </nav>
         <a className="email-link" href="mailto:enquiries@investforward.com">enquiries@investforward.com</a>

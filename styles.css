@@ -417,6 +417,10 @@ button {
   font-size: clamp(0.94rem, 1.12vw, 1.06rem);
 }
 
+.compact-page-hero {
+  padding-bottom: clamp(28px, 4vw, 44px);
+}
+
 .opportunities-hero {
   padding: 120px 0 30px;
 }
@@ -469,6 +473,107 @@ button {
   color: var(--heading);
   font-size: clamp(1rem, 1.35vw, 1.18rem);
   font-weight: 600;
+}
+
+.team-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 0.9fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.team-section-heading h2,
+.team-section-heading p {
+  margin-bottom: 0;
+}
+
+.team-section-heading > p {
+  color: var(--soft);
+  font-size: 0.95rem;
+}
+
+.founder-row,
+.advisor-row {
+  display: grid;
+  gap: 16px;
+}
+
+.founder-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.advisor-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.team-profile {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-strong), rgba(255, 255, 255, 0.07));
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.16);
+}
+
+.team-profile-large {
+  display: grid;
+  grid-template-columns: minmax(118px, 0.38fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  min-height: 230px;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.team-profile-small {
+  min-height: 250px;
+  padding: 20px;
+}
+
+.profile-photo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  min-height: 150px;
+  border: 1px solid rgba(200, 168, 106, 0.34);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(200, 168, 106, 0.18), rgba(77, 183, 255, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.team-profile-small .profile-photo {
+  min-height: 116px;
+  margin-bottom: 16px;
+  aspect-ratio: 16 / 10;
+}
+
+.profile-photo span {
+  color: var(--gold);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 720;
+}
+
+.team-profile h2,
+.team-profile h3 {
+  margin-bottom: 8px;
+}
+
+.profile-position {
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.team-profile p:not(.profile-position) {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.advisor-section {
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.024);
 }
 
 .confidential-grid {
@@ -1512,11 +1617,16 @@ input::placeholder {
   }
 
   .team-grid,
+  .founder-row,
   .why-grid,
   .selected-projects-grid,
   .sector-list,
   .editorial-grid,
   .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .advisor-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1583,6 +1693,7 @@ input::placeholder {
   .gc-section-split,
   .gc-pathway-grid,
   .portfolio-intro,
+  .team-section-heading,
   .opportunity-access,
   .opportunity-detail,
   .teaser-registration,
@@ -1657,6 +1768,8 @@ input::placeholder {
   .sector-list,
   .confidential-grid,
   .portfolio-grid,
+  .founder-row,
+  .advisor-row,
   .service-grid,
   .process-list,
   .team-grid,
