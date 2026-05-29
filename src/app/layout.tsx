@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   title: 'Invest Forward | Strategic Project Development & Capital Introduction',
   description:
     'Invest Forward develops, structures, and presents selected investment opportunities across industrial, energy, technology, and infrastructure sectors.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/assets/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     title: 'Invest Forward',
     description:

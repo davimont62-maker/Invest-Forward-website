@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="invest-forward-favicon-title">
+  <title id="invest-forward-favicon-title">Invest Forward</title>
+  <rect width="64" height="64" rx="10" fill="#0D151D"/>
+  <g transform="translate(10 13) scale(.43)">
+    <path d="M0 0h18v60H0z" fill="#C7CDD6"/>
+    <path d="M28 0h76L90 18H35z" fill="#C7CDD6"/>
+    <path d="M28 28h57l14 10-14 10H43l-8 12H14z" fill="#2FB7E8"/>
+    <path d="M74 28h25L85 38z" fill="#2FB7E8"/>
+  </g>
+</svg>

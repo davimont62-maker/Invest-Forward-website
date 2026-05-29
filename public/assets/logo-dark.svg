@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 92" fill="none" role="img" aria-labelledby="invest-forward-logo-title">
+  <title id="invest-forward-logo-title">Invest Forward</title>
+  <g transform="translate(0 16)">
+    <path d="M0 0h18v60H0z" fill="#C7CDD6"/>
+    <path d="M28 0h76L90 18H35z" fill="#C7CDD6"/>
+    <path d="M28 28h57l14 10-14 10H43l-8 12H14z" fill="#2FB7E8"/>
+    <path d="M74 28h25L85 38z" fill="#2FB7E8"/>
+    <path d="M124 -6v72" stroke="#C7CDD6" stroke-width="2" stroke-linecap="square" opacity=".72"/>
+  </g>
+  <g font-family="Manrope, Inter, Arial, sans-serif" font-size="50" letter-spacing="-3.2">
+    <text x="144" y="58" fill="#2FB7E8" font-weight="800">Invest</text>
+    <text x="309" y="58" fill="#C7CDD6" font-weight="300">For</text>
+    <text x="377" y="58" fill="#2FB7E8" font-weight="300">w</text>
+    <text x="416" y="58" fill="#C7CDD6" font-weight="300">ard</text>
+  </g>
+</svg>
