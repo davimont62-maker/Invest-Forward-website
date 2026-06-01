@@ -14,6 +14,8 @@ const opportunities = [
     stage: "Seed launch",
     status: "Active",
     requirement: "EUR 1.0m seed startup capital",
+    visual: "materials",
+    monogram: "GP",
     summary:
       "Specialty technical-charcoal platform designed to serve industrial, pyrotechnic, and energetic-material supply chains with controlled production, QA, and traceability.",
     focus: ["150-300 t ramp", "Serbian production base", "Controlled technical carbon"],
@@ -26,6 +28,8 @@ const opportunities = [
     stage: "Expansion",
     status: "Active",
     requirement: "Capital and distribution partners",
+    visual: "industrial",
+    monogram: "IM",
     summary:
       "Operating industrial platform with scope for cross-border commercial development, strategic capital, and partner-led market expansion.",
     focus: ["Growth capital", "Distribution access", "Operational scaling"],
@@ -38,6 +42,8 @@ const opportunities = [
     stage: "Early Growth",
     status: "Under Review",
     requirement: "Strategic capital and commercial partners",
+    visual: "technology",
+    monogram: "TP",
     summary:
       "Software platform opportunity under structured review, with emphasis on business model positioning, investor materials, and strategic capital introduction.",
     focus: ["SaaS positioning", "Investor materials", "Strategic partnerships"],
@@ -75,29 +81,54 @@ export default function OpportunitiesPage() {
 
             <div className="portfolio-grid">
               {opportunities.map((opportunity) => (
-                <article key={opportunity.title} className="portfolio-card">
-                  <div className="card-topline">
-                    <span>{opportunity.sector}</span>
-                    <span>{opportunity.status}</span>
+                <article key={opportunity.title} className="portfolio-card opportunity-teaser-card">
+                  <div className={`opportunity-visual opportunity-visual-${opportunity.visual}`}>
+                    <div className="opportunity-monogram">{opportunity.monogram}</div>
+                    <div className="opportunity-visual-copy">
+                      <span>{opportunity.sector}</span>
+                      <strong>{opportunity.stage}</strong>
+                    </div>
                   </div>
-                  <h2>{opportunity.title}</h2>
-                  <p>{opportunity.summary}</p>
-                  <dl className="teaser-details">
-                    <div><dt>Geography</dt><dd>{opportunity.geography}</dd></div>
-                    <div><dt>Stage</dt><dd>{opportunity.stage}</dd></div>
-                    <div><dt>Strategic requirement</dt><dd>{opportunity.requirement}</dd></div>
-                  </dl>
-                  <div className="focus-list">
-                    {opportunity.focus.map((item) => (
-                      <span key={item}>{item}</span>
-                    ))}
+
+                  <div className="opportunity-card-body">
+                    <div className="opportunity-status-row">
+                      <span>{opportunity.status}</span>
+                      <span>{opportunity.sector}</span>
+                    </div>
+                    <h2>{opportunity.title}</h2>
+                    <div className="opportunity-location">
+                      <svg viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M8 14s5-4.4 5-8A5 5 0 0 0 3 6c0 3.6 5 8 5 8Z" />
+                        <circle cx="8" cy="6" r="1.7" />
+                      </svg>
+                      <span>{opportunity.geography}</span>
+                    </div>
+                    <p>{opportunity.summary}</p>
+
+                    <ul className="opportunity-focus-list">
+                      {opportunity.focus.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+
+                    <div className="opportunity-facts">
+                      <div>
+                        <strong>{opportunity.requirement}</strong>
+                        <span>Strategic requirement</span>
+                      </div>
+                      <div>
+                        <strong>{opportunity.stage}</strong>
+                        <span>Development stage</span>
+                      </div>
+                    </div>
+
+                    <p className="confidential-note">
+                      Information available to qualified parties upon request.
+                    </p>
+                    <a className="btn btn-secondary btn-card" href={opportunity.href}>
+                      Request teaser access
+                    </a>
                   </div>
-                  <p className="confidential-note">
-                    Information available to qualified parties upon request.
-                  </p>
-                  <a className="text-link" href={opportunity.href}>
-                    Request teaser access
-                  </a>
                 </article>
               ))}
             </div>

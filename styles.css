@@ -989,6 +989,213 @@ button {
   border-color: rgba(201, 165, 97, 0.48);
 }
 
+.opportunity-teaser-card {
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border-color: rgba(199, 205, 214, 0.18);
+  background:
+    linear-gradient(180deg, rgba(248, 243, 232, 0.98), rgba(242, 238, 229, 0.96));
+  color: var(--paper-ink);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.28);
+}
+
+.opportunity-teaser-card:hover {
+  border-color: rgba(47, 183, 232, 0.48);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
+}
+
+.opportunity-visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: end;
+  min-height: 138px;
+  padding: 22px 22px 18px;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.opportunity-visual::before,
+.opportunity-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.opportunity-visual::before {
+  background:
+    linear-gradient(120deg, rgba(13, 21, 29, 0.08), transparent 30%),
+    radial-gradient(circle at 20% 22%, rgba(47, 183, 232, 0.34), transparent 18rem),
+    linear-gradient(135deg, rgba(18, 49, 74, 0.94), rgba(88, 111, 127, 0.42));
+}
+
+.opportunity-visual::after {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(115deg, rgba(0, 0, 0, 0.72), transparent 76%);
+}
+
+.opportunity-visual-materials::before {
+  background:
+    radial-gradient(circle at 22% 24%, rgba(47, 183, 232, 0.44), transparent 15rem),
+    linear-gradient(130deg, #15212c, #596471 58%, #26333f);
+}
+
+.opportunity-visual-industrial::before {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(199, 205, 214, 0.36), transparent 14rem),
+    linear-gradient(130deg, #172431, #61717d 58%, #1d2b38);
+}
+
+.opportunity-visual-technology::before {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(47, 183, 232, 0.42), transparent 15rem),
+    linear-gradient(130deg, #101c27, #37566f 54%, #172431);
+}
+
+.opportunity-monogram {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 8px;
+  background: rgba(13, 21, 29, 0.52);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  color: #f8f3e8;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.opportunity-visual-copy {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  color: #f8f3e8;
+}
+
+.opportunity-visual-copy span {
+  color: rgba(248, 243, 232, 0.7);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.opportunity-visual-copy strong {
+  max-width: 14rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.68rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.opportunity-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.opportunity-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.opportunity-status-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 5px 9px;
+  border: 1px solid rgba(18, 49, 74, 0.14);
+  border-radius: 999px;
+  background: rgba(18, 49, 74, 0.06);
+  color: rgba(24, 34, 48, 0.72);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.portfolio-card .opportunity-card-body h2 {
+  margin-bottom: 8px;
+  color: var(--paper-ink);
+  font-size: clamp(1.18rem, 1.55vw, 1.46rem);
+  line-height: 1.14;
+}
+
+.opportunity-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+  color: rgba(24, 34, 48, 0.66);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.opportunity-location svg {
+  width: 15px;
+  height: 15px;
+  fill: #2fb7e8;
+}
+
+.opportunity-card-body > p:not(.confidential-note) {
+  color: rgba(24, 34, 48, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.opportunity-focus-list {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--paper-ink);
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.opportunity-focus-list li::marker {
+  color: #2fb7e8;
+}
+
+.opportunity-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.opportunity-facts div {
+  min-width: 0;
+}
+
+.opportunity-facts strong {
+  display: block;
+  color: var(--paper-ink);
+  font-size: 0.95rem;
+  line-height: 1.22;
+}
+
+.opportunity-facts span {
+  display: block;
+  margin-top: 4px;
+  color: rgba(24, 34, 48, 0.62);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
 .portfolio-card h2 {
   margin-bottom: 14px;
   font-size: clamp(1.2rem, 1.72vw, 1.62rem);
@@ -1024,6 +1231,23 @@ button {
 .portfolio-card .confidential-note {
   margin-top: auto;
   padding-top: 20px;
+}
+
+.opportunity-card-body .confidential-note {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(24, 34, 48, 0.12);
+  color: rgba(24, 34, 48, 0.58);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.btn-card {
+  width: fit-content;
+  min-height: 40px;
+  margin-top: 16px;
+  padding: 9px 13px;
+  color: var(--paper-ink);
 }
 
 .opportunity-access-section {
@@ -2558,6 +2782,26 @@ input::placeholder {
 
   .logo-variant-grid {
     grid-template-columns: 1fr;
+  }
+
+  .opportunity-visual {
+    min-height: 120px;
+    padding: 18px;
+  }
+
+  .opportunity-monogram {
+    width: 64px;
+    font-size: 1.08rem;
+  }
+
+  .opportunity-card-body {
+    padding: 18px;
+  }
+
+  .opportunity-facts {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 22px;
   }
 
   .track-metrics {
