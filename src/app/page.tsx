@@ -40,7 +40,6 @@ const caseHistory = [
     context: "State Monopoly operations acquisition",
     geography: "Italy",
     role: "Operational transformation",
-    monogram: "BT",
     summary:
       "Project management and operational leadership across distribution, logistics, and organizational transition during a complex privatization and post-acquisition transformation.",
     focus: ["Business continuity", "Logistics redesign", "Future-state operating model"],
@@ -50,7 +49,6 @@ const caseHistory = [
     context: "Food retail acquisition review",
     geography: "Italy",
     role: "Buyer-side preparation",
-    monogram: "RB",
     summary:
       "Mandated buyer-side evaluation of a major food retail chain with more than 50 stores, covering operational, commercial, organizational, and integration readiness.",
     focus: ["Due diligence", "Cost structure review", "Integration potential"],
@@ -60,7 +58,6 @@ const caseHistory = [
     context: "Supply-chain platform integration",
     geography: "Italy / Europe",
     role: "Integration programme",
-    monogram: "MF",
     summary:
       "Industrial strategy and integration work combining logistics operations with supply-chain software capabilities into an end-to-end management platform.",
     focus: ["Operating model", "Systems integration", "Organizational redesign"],
@@ -70,7 +67,6 @@ const caseHistory = [
     context: "Demand-planning software acquisition",
     geography: "United Kingdom",
     role: "M&A and integration",
-    monogram: "MS",
     summary:
       "Assessment of proprietary software, management capability, and integration potential within a European consolidation strategy for advanced planning solutions.",
     focus: ["Technology assessment", "Management review", "European integration"],
@@ -80,7 +76,6 @@ const caseHistory = [
     context: "Advanced Planning & Scheduling acquisition",
     geography: "France",
     role: "Strategic assessment",
-    monogram: "OR",
     summary:
       "Strategic and industrial assessment of a European APS specialist, including technology, competencies, management, and platform convergence planning.",
     focus: ["Industrial assessment", "Platform convergence", "SCM capability expansion"],
@@ -170,7 +165,6 @@ export default function Home() {
             {caseHistory.map((item) => (
               <article className="case-history-card" key={item.title}>
                 <div className="case-history-visual">
-                  <div className="case-history-monogram">{item.monogram}</div>
                   <div>
                     <span>{item.role}</span>
                     <strong>{item.context}</strong>
