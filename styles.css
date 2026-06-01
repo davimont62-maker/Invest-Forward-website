@@ -2340,6 +2340,20 @@ input::placeholder {
   background: rgba(154, 174, 186, 0.1);
 }
 
+.opportunity-card-body .btn-card,
+.opportunity-card-body .btn-card:visited {
+  border-color: rgba(18, 49, 74, 0.22);
+  background: #12314a;
+  color: #f8f3e8;
+  box-shadow: 0 10px 24px rgba(18, 49, 74, 0.18);
+}
+
+.opportunity-card-body .btn-card:hover {
+  border-color: rgba(47, 183, 232, 0.55);
+  background: #182b3b;
+  color: #fff8ea;
+}
+
 .eyebrow,
 .profile-position,
 .gc-hero-panel span,
