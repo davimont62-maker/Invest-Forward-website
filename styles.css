@@ -1451,6 +1451,23 @@ button {
   font-size: 1.04rem;
 }
 
+.opportunity-overview-media {
+  margin: 24px 0 24px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 194, 208, 0.22);
+  border-radius: var(--radius);
+  background: rgba(13, 21, 29, 0.42);
+  box-shadow: 0 18px 64px rgba(0, 0, 0, 0.18);
+}
+
+.opportunity-overview-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.9 / 1;
+  object-fit: cover;
+  filter: saturate(0.9) contrast(1.02);
+}
+
 .opportunity-snapshot {
   padding: clamp(24px, 4vw, 34px);
   border: 1px solid rgba(201, 165, 97, 0.3);

@@ -35,7 +35,7 @@ const opportunities = [
     summary:
       "Consumer technology platform designed to help users unlock value from unused loyalty points through a centralized rewards and redemption experience.",
     focus: ["Loyalty points conversion", "Partner brand model", "Rewards marketplace"],
-    href: "/contact",
+    href: "/opportunities/bitpoint",
   },
 ];
 

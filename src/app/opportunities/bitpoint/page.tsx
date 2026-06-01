@@ -2,27 +2,27 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
 export const metadata = {
-  title: "Gunpowder Project | Invest Forward",
+  title: "BitPoint | Invest Forward",
   description:
-    "Registration page for qualified parties requesting access to the Gunpowder Project teaser.",
+    "Public overview for qualified parties requesting access to the BitPoint opportunity teaser.",
 };
 
 const overview = [
-  ["Sector", "Strategic materials / technical carbon"],
-  ["Geography", "Serbia / Europe"],
-  ["Stage", "Seed launch and execution readiness"],
-  ["Indicative requirement", "EUR 1.0m seed startup capital"],
-  ["Target ramp", "150-300 tonnes finished charcoal"],
+  ["Sector", "Technology / loyalty infrastructure"],
+  ["Geography", "Europe / global"],
+  ["Stage", "Launch preparation"],
+  ["Indicative requirement", "EUR 1.75m operational expansion capital"],
+  ["Use of proceeds", "Development, team, OPEX, marketing, and launch activity"],
   ["Access status", "Detailed teaser available following registration review"],
 ];
 
 const thesis = [
-  "Controlled technical charcoal for industrial, pyrotechnic, and energetic-material supply chains.",
-  "Serbian production base with feedstock, fabrication, and regional industrial proximity advantages.",
-  "Development plan focused on permitting, safety controls, QA, product qualification, and first commercial ramp.",
+  "Consumer platform designed to help users unlock value from unused loyalty points.",
+  "Centralized rewards and redemption experience with potential partner-brand revenue streams.",
+  "Expansion plan focused on technology development, partner onboarding, marketing, and operating runway.",
 ];
 
-export default function GunpowderProjectPage() {
+export default function BitPointPage() {
   return (
     <>
       <SiteHeader />
@@ -30,12 +30,11 @@ export default function GunpowderProjectPage() {
         <section className="page-hero">
           <div className="container">
             <p className="eyebrow">Opportunity registration</p>
-            <h1>Gunpowder Project - Vegetable Charcoal</h1>
+            <h1>BitPoint - Loyalty Points Platform</h1>
             <p>
-              A confidential strategic-materials opportunity focused on controlled technical
-              charcoal production for selected industrial and energetic-material supply chains.
-              Broader teaser materials are available only to qualified parties following
-              registration review.
+              A confidential consumer-technology opportunity focused on converting unused loyalty
+              points into a more accessible rewards and redemption experience. Broader teaser
+              materials are available only to qualified parties following registration review.
             </p>
           </div>
         </section>
@@ -44,21 +43,20 @@ export default function GunpowderProjectPage() {
           <div className="container opportunity-detail">
             <div>
               <p className="eyebrow">Public overview</p>
-              <h2>Specialty technical carbon with European industrial relevance.</h2>
+              <h2>Turning unused loyalty points into a structured rewards platform.</h2>
               <figure className="opportunity-overview-media">
-                <img src="/assets/opportunity-gunpowder-banner.png" alt="" />
+                <img src="/assets/opportunity-bitpoint-banner.png" alt="" />
               </figure>
               <p>
-                The project is being developed as a Serbian technical-charcoal platform using
-                controlled retort processing, selected low-resin wood inputs, batch traceability,
-                and quality-control discipline. The broader investment thesis is linked to
-                Europe's renewed focus on upstream strategic materials and resilient regional
-                supply chains.
+                BitPoint is positioned as a consumer-facing platform that helps users centralize
+                loyalty programmes, convert unused points into platform value, and access a broader
+                rewards catalogue. The opportunity is linked to the global scale of unused and
+                expiring loyalty points across fragmented programmes.
               </p>
               <p>
                 This summary is not an offer of securities. Further materials may include the
-                investor presentation, preliminary management case, use of proceeds, operating
-                model, and diligence notes after qualification.
+                investor presentation, management case, business model, use of proceeds, market
+                positioning, and diligence notes after qualification.
               </p>
             </div>
 
@@ -96,7 +94,7 @@ export default function GunpowderProjectPage() {
 
             <form
               className="contact-form"
-              action="mailto:enquiries@investforward.co.uk?subject=Gunpowder%20Project%20teaser%20access%20request"
+              action="mailto:enquiries@investforward.co.uk?subject=BitPoint%20teaser%20access%20request"
               method="post"
               encType="text/plain"
             >
@@ -119,13 +117,13 @@ export default function GunpowderProjectPage() {
                   <option>Family office</option>
                   <option>Strategic investor</option>
                   <option>Institutional investor</option>
-                  <option>Industrial partner</option>
+                  <option>Technology partner</option>
                   <option>Professional adviser</option>
                 </select>
               </label>
               <label>
                 <span>Investment focus</span>
-                <input name="focus" placeholder="Industrial, defence supply chain, materials..." />
+                <input name="focus" placeholder="Technology, loyalty, consumer platforms..." />
               </label>
               <label>
                 <span>Typical investment range</span>
