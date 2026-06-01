@@ -133,6 +133,20 @@ button {
   object-position: left center;
 }
 
+.brand-logo-supplied {
+  width: clamp(360px, 27vw, 470px);
+  height: 78px;
+  overflow: hidden;
+}
+
+.brand-logo-supplied img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .precise-mark {
   width: clamp(86px, 7vw, 118px);
   height: auto;
@@ -1957,6 +1971,11 @@ textarea:focus {
   height: 66px;
 }
 
+.site-footer .brand-logo-supplied {
+  width: 320px;
+  height: 66px;
+}
+
 .site-footer .precise-mark {
   width: 88px;
 }
@@ -2330,6 +2349,11 @@ input::placeholder {
   }
 
   .brand-logo-svg {
+    width: min(68vw, 290px);
+    height: 58px;
+  }
+
+  .brand-logo-supplied {
     width: min(68vw, 290px);
     height: 58px;
   }

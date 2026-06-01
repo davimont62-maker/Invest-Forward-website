@@ -1,8 +1,16 @@
 type BrandLogoProps = {
-  variant?: "image" | "wordmark" | "splitword" | "momentum" | "axis" | "gateway" | "monogram";
+  variant?: "image" | "supplied" | "wordmark" | "splitword" | "momentum" | "axis" | "gateway" | "monogram";
 };
 
-export default function BrandLogo({ variant = "image" }: BrandLogoProps) {
+export default function BrandLogo({ variant = "supplied" }: BrandLogoProps) {
+  if (variant === "supplied") {
+    return (
+      <span className="brand-logo brand-logo-supplied" aria-hidden="true">
+        <img src="/assets/invest-forward-supplied-logo.png" alt="" />
+      </span>
+    );
+  }
+
   if (variant === "image") {
     return (
       <span className="brand-logo brand-logo-image" aria-hidden="true">
