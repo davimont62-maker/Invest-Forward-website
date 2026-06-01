@@ -6,6 +6,7 @@ export type NewsInsight = {
   date: string;
   readTime: string;
   imagePosition: string;
+  image?: string;
   sections: Array<{
     heading?: string;
     paragraphs?: string[];
@@ -86,6 +87,59 @@ export const newsInsights: NewsInsight[] = [
           "The rebuilding of industrial ecosystems, manufacturing capacity, and strategic reserves may require sustained investment over many years.",
           "For investors, this creates a broader theme: not only defence spending itself, but the industrial foundation required to sustain it.",
           "In this environment, upstream strategic materials and specialist industrial processing may become one of the most overlooked yet potentially significant areas of the next European industrial cycle.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "bitpoint-loyalty-points-solution",
+    type: "Insight",
+    title: "BitPoint: Turning Unused Loyalty Points into a More Flexible Rewards Platform",
+    excerpt:
+      "Why fragmented loyalty programmes, expiring points, and unused customer value create room for a more centralized rewards solution.",
+    date: "2026-06-01",
+    readTime: "4 min read",
+    imagePosition: "50% 50%",
+    image: "/assets/opportunity-bitpoint-banner.png",
+    sections: [
+      {
+        paragraphs: [
+          "Loyalty programmes have become a major part of the consumer economy, but much of their value remains trapped inside fragmented systems.",
+          "Consumers collect points across airlines, retail, food, hospitality, financial services, and digital platforms, yet many of those points are never used effectively.",
+          "The result is a paradox: companies issue loyalty value to strengthen customer relationships, while customers often experience complexity, expiry dates, limited redemption options, and low perceived usefulness.",
+        ],
+      },
+      {
+        heading: "The Problem: Value Exists, but Access Is Fragmented",
+        paragraphs: [
+          "Unused and expiring loyalty points represent a large pool of latent consumer value. The challenge is not only the existence of points, but the lack of a simple way to manage, compare, and convert them across programmes.",
+          "For consumers, this creates friction. Points are spread across multiple accounts, redemption rules are inconsistent, and rewards are often difficult to evaluate.",
+          "For brands, this creates an engagement gap. Loyalty programmes may generate data and retention potential, but inactive points and low redemption engagement can weaken the customer relationship they were designed to support.",
+        ],
+      },
+      {
+        heading: "The BitPoint Concept",
+        paragraphs: [
+          "BitPoint is positioned as a platform that helps users centralize loyalty cards, convert unused points into platform value, and access a broader rewards catalogue.",
+          "The core idea is to turn dormant or underused points into a more flexible rewards experience, while creating a structured environment for partner brands to reach consumers through targeted redemption and engagement channels.",
+        ],
+      },
+      {
+        heading: "Why the Model Is Strategically Interesting",
+        bullets: [
+          "it addresses a real consumer frustration around unused points",
+          "it can sit across multiple loyalty categories rather than one vertical",
+          "it creates potential partner-brand revenue streams",
+          "it may generate useful consumer behaviour insights",
+          "it supports a marketplace-style rewards environment without positioning itself as a public investment platform",
+        ],
+      },
+      {
+        heading: "Execution Will Matter",
+        paragraphs: [
+          "The attractiveness of the concept depends on execution: user acquisition, partner onboarding, technology reliability, reward catalogue depth, conversion logic, and clear consumer trust.",
+          "For investors and strategic partners, the key question is whether BitPoint can move from a compelling solution concept into a scalable operating platform with disciplined commercial partnerships.",
+          "That is why the opportunity should be reviewed through a structured diligence process, with attention to technology, partnerships, user economics, regulatory considerations, and management execution capacity.",
         ],
       },
     ],

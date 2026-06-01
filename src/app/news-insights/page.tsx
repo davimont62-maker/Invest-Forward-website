@@ -40,7 +40,7 @@ export default function NewsInsightsPage() {
                 <article className="insight-card" key={item.id}>
                   <div className="insight-card-media">
                     <img
-                      src="/assets/invest-forward-hero.png"
+                      src={item.image ?? "/assets/invest-forward-hero.png"}
                       alt=""
                       aria-hidden="true"
                       style={{ objectPosition: item.imagePosition }}
