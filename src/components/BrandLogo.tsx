@@ -5,8 +5,8 @@ type BrandLogoProps = {
 export default function BrandLogo({ variant = "supplied" }: BrandLogoProps) {
   if (variant === "supplied") {
     return (
-      <span className="brand-logo brand-logo-supplied" aria-hidden="true">
-        <img src="/assets/invest-forward-supplied-logo.png" alt="" />
+      <span className="brand-logo brand-logo-svg" aria-hidden="true">
+        <img src="/assets/logo-dark.svg" alt="" />
       </span>
     );
   }
