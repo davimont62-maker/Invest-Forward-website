@@ -826,29 +826,16 @@ button {
 }
 
 .article-layout {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
-  gap: clamp(32px, 7vw, 88px);
-  align-items: start;
-}
-
-.article-side {
-  position: sticky;
-  top: 118px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.045);
-}
-
-.article-side p:not(.eyebrow) {
-  color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.55;
+  display: block;
 }
 
 .article-body {
   max-width: 820px;
+  margin-inline: auto;
+}
+
+.article-back-link {
+  margin: 0 0 28px;
 }
 
 .article-body section + section {
@@ -3069,10 +3056,6 @@ input::placeholder {
     grid-template-columns: 1fr;
     gap: 10px;
     padding-top: 22px;
-  }
-
-  .article-side {
-    position: static;
   }
 
   .track-metrics {

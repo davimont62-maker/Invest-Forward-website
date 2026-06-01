@@ -51,16 +51,8 @@ export default async function NewsInsightArticlePage({ params }: PageProps) {
 
         <section className="section article-section">
           <article className="container article-layout">
-            <aside className="article-side">
-              <p className="eyebrow">Invest Forward</p>
-              <p>
-                Institutional commentary for qualified investors, strategic partners, and project
-                owners reviewing selected real-economy opportunities.
-              </p>
-              <a className="text-link" href="/news-insights">Back to insights</a>
-            </aside>
-
             <div className="article-body">
+              <a className="text-link article-back-link" href="/news-insights">Back to insights</a>
               {article.sections.map((section, index) => (
                 <section key={`${section.heading ?? "intro"}-${index}`}>
                   {section.heading && <h2>{section.heading}</h2>}
