@@ -55,7 +55,7 @@ export default function NewsInsightsPage() {
                     </div>
                     <h2>{item.title}</h2>
                     <p>{item.excerpt}</p>
-                    <a href="#" aria-label={`Read ${item.title}`}>
+                    <a href={`/news-insights/${item.id}`} aria-label={`Read ${item.title}`}>
                       Read note
                     </a>
                   </div>
