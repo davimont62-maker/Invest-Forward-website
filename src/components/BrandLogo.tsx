@@ -2,7 +2,7 @@ type BrandLogoProps = {
   variant?: "image" | "supplied" | "wordmark" | "splitword" | "momentum" | "axis" | "gateway" | "monogram";
 };
 
-export default function BrandLogo({ variant = "supplied" }: BrandLogoProps) {
+export default function BrandLogo({ variant = "image" }: BrandLogoProps) {
   if (variant === "supplied") {
     return (
       <span className="brand-logo brand-logo-svg" aria-hidden="true">
