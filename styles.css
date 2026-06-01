@@ -1259,6 +1259,163 @@ button {
   color: #fff8ea;
 }
 
+.case-history-section {
+  border-top: 1px solid rgba(248, 243, 232, 0.14);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(123, 46, 53, 0.22), transparent 26rem),
+    linear-gradient(180deg, rgba(255, 248, 234, 0.055), rgba(255, 248, 234, 0.02));
+}
+
+.case-history-intro {
+  margin-bottom: 26px;
+}
+
+.case-history-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.case-history-card {
+  overflow: hidden;
+  border: 1px solid rgba(201, 165, 97, 0.18);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(34, 46, 58, 0.96), rgba(25, 34, 44, 0.96));
+  box-shadow: 0 18px 58px rgba(0, 0, 0, 0.2);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.case-history-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 165, 97, 0.42);
+  box-shadow: 0 26px 72px rgba(0, 0, 0, 0.28);
+}
+
+.case-history-visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: end;
+  min-height: 128px;
+  padding: 18px;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.case-history-visual::before,
+.case-history-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.case-history-visual::before {
+  background:
+    radial-gradient(circle at 24% 22%, rgba(201, 165, 97, 0.26), transparent 12rem),
+    linear-gradient(135deg, rgba(123, 46, 53, 0.72), rgba(30, 45, 57, 0.98) 64%, rgba(13, 21, 29, 0.96));
+}
+
+.case-history-visual::after {
+  background:
+    linear-gradient(90deg, rgba(248, 243, 232, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(248, 243, 232, 0.1) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(120deg, rgba(0, 0, 0, 0.68), transparent 78%);
+}
+
+.case-history-monogram {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(248, 243, 232, 0.38);
+  border-radius: 8px;
+  background: rgba(13, 21, 29, 0.46);
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.case-history-visual div:last-child {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.case-history-visual span {
+  color: rgba(248, 243, 232, 0.64);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-history-visual strong {
+  color: var(--heading);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.case-history-body {
+  padding: 18px;
+}
+
+.case-history-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 13px;
+}
+
+.case-history-meta span {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid rgba(201, 165, 97, 0.2);
+  border-radius: 999px;
+  background: rgba(201, 165, 97, 0.08);
+  color: rgba(248, 243, 232, 0.7);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.case-history-body h3 {
+  margin: 0 0 10px;
+  color: var(--heading);
+  font-size: clamp(1rem, 1.2vw, 1.18rem);
+  line-height: 1.18;
+}
+
+.case-history-body p {
+  margin: 0;
+  color: rgba(239, 228, 209, 0.76);
+  font-size: 0.82rem;
+  line-height: 1.58;
+}
+
+.case-history-body ul {
+  display: grid;
+  gap: 6px;
+  margin: 16px 0 0;
+  padding-left: 16px;
+  color: rgba(248, 243, 232, 0.86);
+  font-size: 0.78rem;
+  font-weight: 720;
+  line-height: 1.42;
+}
+
+.case-history-body li::marker {
+  color: rgba(201, 165, 97, 0.88);
+}
+
 .opportunity-access-section {
   border-top: 1px solid var(--line);
   background:
@@ -2559,6 +2716,7 @@ input::placeholder {
   .selected-projects-grid,
   .sector-list,
   .editorial-grid,
+  .case-history-grid,
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2789,6 +2947,7 @@ input::placeholder {
   .editorial-grid,
   .sector-list,
   .confidential-grid,
+  .case-history-grid,
   .portfolio-grid,
   .founder-row,
   .advisor-row,

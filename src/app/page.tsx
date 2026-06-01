@@ -34,6 +34,59 @@ const sectors = [
   "Defence / Security",
 ];
 
+const caseHistory = [
+  {
+    title: "ETINERA - British American Tobacco",
+    context: "State Monopoly operations acquisition",
+    geography: "Italy",
+    role: "Operational transformation",
+    monogram: "BT",
+    summary:
+      "Project management and operational leadership across distribution, logistics, and organizational transition during a complex privatization and post-acquisition transformation.",
+    focus: ["Business continuity", "Logistics redesign", "Future-state operating model"],
+  },
+  {
+    title: "REWE / BILLA",
+    context: "Food retail acquisition review",
+    geography: "Italy",
+    role: "Buyer-side preparation",
+    monogram: "RB",
+    summary:
+      "Mandated buyer-side evaluation of a major food retail chain with more than 50 stores, covering operational, commercial, organizational, and integration readiness.",
+    focus: ["Due diligence", "Cost structure review", "Integration potential"],
+  },
+  {
+    title: "MERZARIO TRASPORTI - Finmatica",
+    context: "Supply-chain platform integration",
+    geography: "Italy / Europe",
+    role: "Integration programme",
+    monogram: "MF",
+    summary:
+      "Industrial strategy and integration work combining logistics operations with supply-chain software capabilities into an end-to-end management platform.",
+    focus: ["Operating model", "Systems integration", "Organizational redesign"],
+  },
+  {
+    title: "MERCIA SYSTEMS",
+    context: "Demand-planning software acquisition",
+    geography: "United Kingdom",
+    role: "M&A and integration",
+    monogram: "MS",
+    summary:
+      "Assessment of proprietary software, management capability, and integration potential within a European consolidation strategy for advanced planning solutions.",
+    focus: ["Technology assessment", "Management review", "European integration"],
+  },
+  {
+    title: "ORTEMS",
+    context: "Advanced Planning & Scheduling acquisition",
+    geography: "France",
+    role: "Strategic assessment",
+    monogram: "OR",
+    summary:
+      "Strategic and industrial assessment of a European APS specialist, including technology, competencies, management, and platform convergence planning.",
+    focus: ["Industrial assessment", "Platform convergence", "SCM capability expansion"],
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -97,6 +150,47 @@ export default function Home() {
                 </div>
               ))}
             </dl>
+          </div>
+        </section>
+
+        <section className="section case-history-section" id="case-history">
+          <div className="container portfolio-intro case-history-intro">
+            <div>
+              <p className="eyebrow">Case history</p>
+              <h2>Selected historical involvement across acquisition and integration work.</h2>
+            </div>
+            <p>
+              Examples below reflect management experience in operational transformation,
+              acquisition preparation, industrial assessment, and post-transaction integration.
+              They are included as background context and are not current investment opportunities.
+            </p>
+          </div>
+
+          <div className="container case-history-grid">
+            {caseHistory.map((item) => (
+              <article className="case-history-card" key={item.title}>
+                <div className="case-history-visual">
+                  <div className="case-history-monogram">{item.monogram}</div>
+                  <div>
+                    <span>{item.role}</span>
+                    <strong>{item.context}</strong>
+                  </div>
+                </div>
+                <div className="case-history-body">
+                  <div className="case-history-meta">
+                    <span>{item.geography}</span>
+                    <span>Historical case</span>
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.summary}</p>
+                  <ul>
+                    {item.focus.map((focus) => (
+                      <li key={focus}>{focus}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
