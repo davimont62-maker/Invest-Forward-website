@@ -1017,7 +1017,6 @@ button {
   overflow: hidden;
 }
 
-.opportunity-visual::before,
 .opportunity-visual::after {
   content: "";
   position: absolute;
@@ -1025,44 +1024,29 @@ button {
   z-index: -1;
 }
 
-.opportunity-visual::before {
-  background:
-    linear-gradient(120deg, rgba(13, 21, 29, 0.08), transparent 30%),
-    radial-gradient(circle at 20% 22%, rgba(47, 183, 232, 0.34), transparent 18rem),
-    linear-gradient(135deg, rgba(18, 49, 74, 0.94), rgba(88, 111, 127, 0.42));
+.opportunity-visual img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) contrast(1.04);
+  transform: scale(1.02);
 }
 
 .opportunity-visual::after {
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px);
-  background-size: 58px 58px;
-  mask-image: linear-gradient(115deg, rgba(0, 0, 0, 0.72), transparent 76%);
+    linear-gradient(90deg, rgba(13, 21, 29, 0.78), rgba(13, 21, 29, 0.42) 48%, rgba(13, 21, 29, 0.24)),
+    linear-gradient(180deg, rgba(13, 21, 29, 0.08), rgba(13, 21, 29, 0.42));
 }
 
-.opportunity-visual-materials::before {
-  background:
-    radial-gradient(circle at 22% 24%, rgba(47, 183, 232, 0.44), transparent 15rem),
-    linear-gradient(130deg, #15212c, #596471 58%, #26333f);
+.opportunity-visual-bitpoint img {
+  object-position: center center;
 }
 
-.opportunity-visual-industrial::before {
-  background:
-    radial-gradient(circle at 18% 28%, rgba(199, 205, 214, 0.36), transparent 14rem),
-    linear-gradient(130deg, #172431, #61717d 58%, #1d2b38);
-}
-
-.opportunity-visual-technology::before {
-  background:
-    radial-gradient(circle at 18% 24%, rgba(47, 183, 232, 0.42), transparent 15rem),
-    linear-gradient(130deg, #101c27, #37566f 54%, #172431);
-}
-
-.opportunity-visual-bitpoint::before {
-  background:
-    radial-gradient(circle at 20% 22%, rgba(47, 183, 232, 0.38), transparent 14rem),
-    radial-gradient(circle at 88% 8%, rgba(199, 205, 214, 0.24), transparent 12rem),
-    linear-gradient(130deg, #10243a, #284e68 54%, #182431);
+.opportunity-visual-materials img {
+  object-position: center center;
 }
 
 .opportunity-monogram {

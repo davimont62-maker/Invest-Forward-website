@@ -16,6 +16,7 @@ const opportunities = [
     requirement: "EUR 1.0m seed startup capital",
     visual: "materials",
     monogram: "GP",
+    image: "/assets/opportunity-gunpowder-banner.png",
     summary:
       "Specialty technical-charcoal platform designed to serve industrial, pyrotechnic, and energetic-material supply chains with controlled production, QA, and traceability.",
     focus: ["150-300 t ramp", "Serbian production base", "Controlled technical carbon"],
@@ -30,6 +31,7 @@ const opportunities = [
     requirement: "EUR 1.75m operational expansion capital",
     visual: "bitpoint",
     monogram: "BP",
+    image: "/assets/opportunity-bitpoint-banner.png",
     summary:
       "Consumer technology platform designed to help users unlock value from unused loyalty points through a centralized rewards and redemption experience.",
     focus: ["Loyalty points conversion", "Partner brand model", "Rewards marketplace"],
@@ -69,6 +71,7 @@ export default function OpportunitiesPage() {
               {opportunities.map((opportunity) => (
                 <article key={opportunity.title} className="portfolio-card opportunity-teaser-card">
                   <div className={`opportunity-visual opportunity-visual-${opportunity.visual}`}>
+                    <img src={opportunity.image} alt="" aria-hidden="true" />
                     <div className="opportunity-monogram">{opportunity.monogram}</div>
                     <div className="opportunity-visual-copy">
                       <span>{opportunity.sector}</span>
