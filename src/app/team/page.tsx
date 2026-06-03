@@ -35,6 +35,14 @@ const founders: Profile[] = [
 
 const advisors: Profile[] = [
   {
+    initials: "AC",
+    name: "Alessandro Capo",
+    position: "Advisor - Innovation & Regulatory Strategy",
+    photo: "/assets/alessandro-capo.jpg",
+    description:
+      "Supports tech-driven companies with regulatory insight and operational execution, bridging innovation, compliance, and market deployment across EU contexts. Advises on partnerships, governance, scalable growth models, and data-enabled operations.",
+  },
+  {
     initials: "EU",
     name: "European Advisor",
     position: "Institutional and strategic relationships",
