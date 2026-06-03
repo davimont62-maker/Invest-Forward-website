@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import MailtoForm from "@/components/MailtoForm";
 
 const trackRecord = [
   ["25+", "Years combined experience"],
@@ -267,17 +268,15 @@ export default function Home() {
               </p>
               <a className="email-link" href="mailto:enquiries@investforward.co.uk">enquiries@investforward.co.uk</a>
             </div>
-            <form
+            <MailtoForm
               className="contact-form"
-              action="mailto:enquiries@investforward.co.uk?subject=Invest%20Forward%20website%20contact"
-              method="post"
-              encType="text/plain"
+              subject="Invest Forward website contact"
             >
               <label><span>Name</span><input type="text" name="name" autoComplete="name" required /></label>
               <label><span>Email</span><input type="email" name="email" autoComplete="email" required /></label>
               <label><span>Message</span><textarea name="message" rows={5} required></textarea></label>
               <button className="btn btn-primary" type="submit">Contact the Team</button>
-            </form>
+            </MailtoForm>
           </div>
         </section>
       </main>

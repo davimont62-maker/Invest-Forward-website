@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import MailtoForm from "@/components/MailtoForm";
 
 export const metadata = {
   title: "BitPoint | Invest Forward",
@@ -92,11 +93,9 @@ export default function BitPointPage() {
               </ul>
             </div>
 
-            <form
+            <MailtoForm
               className="contact-form"
-              action="mailto:enquiries@investforward.co.uk?subject=BitPoint%20teaser%20access%20request"
-              method="post"
-              encType="text/plain"
+              subject="BitPoint teaser access request"
             >
               <label>
                 <span>Name</span>
@@ -142,7 +141,7 @@ export default function BitPointPage() {
                 Detailed information is provided subject to review, due diligence, professional
                 advice, and applicable regulations.
               </p>
-            </form>
+            </MailtoForm>
           </div>
         </section>
       </main>

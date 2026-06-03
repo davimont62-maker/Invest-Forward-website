@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import MailtoForm from "@/components/MailtoForm";
 
 export const metadata = {
   title: "Gunpowder Project | Invest Forward",
@@ -94,11 +95,9 @@ export default function GunpowderProjectPage() {
               </ul>
             </div>
 
-            <form
+            <MailtoForm
               className="contact-form"
-              action="mailto:enquiries@investforward.co.uk?subject=Gunpowder%20Project%20teaser%20access%20request"
-              method="post"
-              encType="text/plain"
+              subject="Gunpowder Project teaser access request"
             >
               <label>
                 <span>Name</span>
@@ -144,7 +143,7 @@ export default function GunpowderProjectPage() {
                 Detailed information is provided subject to review, due diligence, professional
                 advice, and applicable regulations.
               </p>
-            </form>
+            </MailtoForm>
           </div>
         </section>
       </main>

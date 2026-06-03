@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import MailtoForm from "@/components/MailtoForm";
 
 export const metadata = {
   title: "Investors | Invest Forward",
@@ -49,11 +50,9 @@ export default function InvestorsPage() {
                 require review, professional advice, and NDA.
               </p>
             </div>
-            <form
+            <MailtoForm
               className="network-form"
-              action="mailto:enquiries@investforward.co.uk?subject=Invest%20Forward%20investor%20network%20registration"
-              method="post"
-              encType="text/plain"
+              subject="Invest Forward investor network registration"
             >
               <label><span>Name</span><input type="text" name="name" autoComplete="name" required /></label>
               <label><span>Organisation</span><input type="text" name="organisation" autoComplete="organization" /></label>
@@ -62,7 +61,7 @@ export default function InvestorsPage() {
               <label><span>Geography</span><input type="text" name="geography" /></label>
               <label><span>Typical Investment Range</span><input type="text" name="range" /></label>
               <button className="btn btn-primary" type="submit">Register Interest</button>
-            </form>
+            </MailtoForm>
           </div>
         </section>
       </main>
