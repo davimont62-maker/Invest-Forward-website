@@ -29,7 +29,7 @@ const founders: Profile[] = [
     position: "Managing Partner",
     photo: "/assets/davide-montini.jpg",
     description:
-      "Davide is one of the founding partners at Invest Forward. Before his +30 years of investing experience, he had an operational background working with growth businesses across Europe.",
+      "Davide is one of the founding partners at Invest Forward, bringing more than 30 years of combined operational, commercial, and investment experience across European markets. His background includes working with growth-oriented businesses, cross-border projects, and strategic development initiatives across industrial, technology, and international trade sectors.",
   },
 ];
 
