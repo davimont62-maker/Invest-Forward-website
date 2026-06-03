@@ -28,7 +28,7 @@ const opportunities = [
     geography: "Europe / Global",
     stage: "Launch preparation",
     status: "Active",
-    requirement: "EUR 1.75m operational expansion capital",
+    requirement: "EUR 2.2m operational expansion capital",
     visual: "bitpoint",
     monogram: "BP",
     image: "/assets/opportunity-bitpoint-banner.png",

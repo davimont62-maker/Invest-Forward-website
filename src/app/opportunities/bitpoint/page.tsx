@@ -11,7 +11,7 @@ const overview = [
   ["Sector", "Technology / loyalty infrastructure"],
   ["Geography", "Europe / global"],
   ["Stage", "Launch preparation"],
-  ["Indicative requirement", "EUR 1.75m operational expansion capital"],
+  ["Indicative requirement", "EUR 2.2m operational expansion capital"],
   ["Use of proceeds", "Development, team, OPEX, marketing, and launch activity"],
   ["Access status", "Detailed teaser available following registration review"],
 ];
