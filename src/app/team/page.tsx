@@ -44,7 +44,7 @@ const advisors: Profile[] = [
   },
   {
     initials: "W",
-    name: "Wasilios",
+    name: "Wasilios Spanos",
     position: "Advisor - Germany & Austria",
     photo: "/assets/wasilios.jpg",
     description:
