@@ -29,7 +29,12 @@ export default function ContactPage() {
               <p>For confidential project or investor discussions, contact the team directly.</p>
               <a className="email-link" href="mailto:enquiries@investforward.co.uk">enquiries@investforward.co.uk</a>
             </div>
-            <form className="contact-form" action="#" method="post">
+            <form
+              className="contact-form"
+              action="mailto:enquiries@investforward.co.uk?subject=Invest%20Forward%20contact%20request"
+              method="post"
+              encType="text/plain"
+            >
               <label><span>Name</span><input type="text" name="name" autoComplete="name" required /></label>
               <label><span>Email</span><input type="email" name="email" autoComplete="email" required /></label>
               <label>

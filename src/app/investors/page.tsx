@@ -49,7 +49,12 @@ export default function InvestorsPage() {
                 require review, professional advice, and NDA.
               </p>
             </div>
-            <form className="network-form" action="#" method="post">
+            <form
+              className="network-form"
+              action="mailto:enquiries@investforward.co.uk?subject=Invest%20Forward%20investor%20network%20registration"
+              method="post"
+              encType="text/plain"
+            >
               <label><span>Name</span><input type="text" name="name" autoComplete="name" required /></label>
               <label><span>Organisation</span><input type="text" name="organisation" autoComplete="organization" /></label>
               <label><span>Email</span><input type="email" name="email" autoComplete="email" required /></label>
