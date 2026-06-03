@@ -43,28 +43,12 @@ const advisors: Profile[] = [
       "Supports tech-driven companies with regulatory insight and operational execution, bridging innovation, compliance, and market deployment across EU contexts. Advises on partnerships, governance, scalable growth models, and data-enabled operations.",
   },
   {
-    initials: "EU",
-    name: "European Advisor",
-    position: "Institutional and strategic relationships",
-    description: "Supports cross-border positioning, partner access, and institutional relationship development.",
-  },
-  {
-    initials: "UK",
-    name: "UK Country Manager",
-    position: "Investor and partner coordination",
-    description: "Coordinates UK-based investor, advisory, and project-owner relationships.",
-  },
-  {
-    initials: "RS",
-    name: "Serbia Country Manager",
-    position: "Industrial projects and local execution",
-    description: "Supports local stakeholder liaison, project coordination, and regional execution context.",
-  },
-  {
-    initials: "GR",
-    name: "Government & Regulatory Advisor",
-    position: "Public-sector liaison and permitting pathways",
-    description: "Advises on regulatory interfaces, public stakeholder communication, and diligence preparation.",
+    initials: "W",
+    name: "Wasilios",
+    position: "Advisor - Germany & Austria",
+    photo: "/assets/wasilios.jpg",
+    description:
+      "Wasilios has 20+ years of experience driving growth, market expansion, and revenue acceleration across global organizations, supporting Invest Forward activity in Germany and Austria.",
   },
 ];
 
