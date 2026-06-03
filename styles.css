@@ -1609,6 +1609,26 @@ button {
   font-size: 0.8rem;
 }
 
+.form-status {
+  margin: 0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  padding: 0.8rem 0.95rem;
+}
+
+.form-status.is-success {
+  background: rgba(47, 183, 232, 0.12);
+  border: 1px solid rgba(47, 183, 232, 0.28);
+  color: var(--ink);
+}
+
+.form-status.is-error {
+  background: rgba(180, 68, 68, 0.12);
+  border: 1px solid rgba(180, 68, 68, 0.28);
+  color: var(--ink);
+}
+
 .network-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
