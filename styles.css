@@ -339,6 +339,7 @@ button {
 .language-select {
   display: inline-flex;
   align-items: center;
+  gap: 4px;
   color: rgba(239, 228, 209, 0.72);
   font-size: 0.76rem;
   font-weight: 700;
@@ -354,9 +355,8 @@ button {
   white-space: nowrap;
 }
 
-.language-select select {
-  min-width: 58px;
-  padding: 7px 22px 7px 9px;
+.language-select a {
+  padding: 7px 8px;
   border: 1px solid rgba(168, 194, 208, 0.32);
   border-radius: 2px;
   background: rgba(10, 17, 24, 0.42);
@@ -364,6 +364,12 @@ button {
   font-size: 0.78rem;
   font-weight: 760;
   line-height: 1;
+}
+
+.language-select a.is-active {
+  border-color: rgba(47, 183, 232, 0.54);
+  background: rgba(47, 183, 232, 0.14);
+  color: var(--heading);
 }
 
 .gc-hero {
@@ -2925,10 +2931,9 @@ input::placeholder {
     white-space: normal;
   }
 
-  .language-select select {
-    width: 100%;
-    max-width: 132px;
-    margin-left: auto;
+  .language-select a {
+    min-width: 48px;
+    text-align: center;
   }
 
   .hero {

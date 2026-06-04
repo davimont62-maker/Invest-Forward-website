@@ -2,7 +2,6 @@
 
 import BrandLogo from "@/components/BrandLogo";
 import { defaultLocale, navLabels, navLinks, supportedLocales, type Locale } from "@/config/i18n";
-import type { ChangeEvent } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -15,21 +14,28 @@ function localizeHref(href: string, locale: Locale) {
     return href;
   }
 
+  if (href === "/news-insights") {
+    return href;
+  }
+
   return href === "/" ? `/${locale}` : `/${locale}${href}`;
 }
 
 function switchLocaleHref(pathname: string, nextLocale: Locale) {
   const cleanPath = pathname.replace(/^\/it(?=\/|$)/, "") || "/";
+  const translatedPaths = new Set(["/", "/about", "/services", "/investors", "/opportunities", "/team", "/contact"]);
+  const targetPath = translatedPaths.has(cleanPath) ? cleanPath : "/";
 
   if (nextLocale === defaultLocale) {
-    return cleanPath;
+    return targetPath;
   }
 
-  return cleanPath === "/" ? `/${nextLocale}` : `/${nextLocale}${cleanPath}`;
+  return targetPath === "/" ? `/${nextLocale}` : `/${nextLocale}${targetPath}`;
 }
 
 export default function SiteHeader({ locale: initialLocale = defaultLocale }: SiteHeaderProps) {
   const [locale, setLocale] = useState<Locale>(initialLocale);
+  const [currentPath, setCurrentPath] = useState("/");
 
   useEffect(() => {
     const header = document.querySelector("[data-header]");
@@ -67,15 +73,9 @@ export default function SiteHeader({ locale: initialLocale = defaultLocale }: Si
   }, []);
 
   useEffect(() => {
+    setCurrentPath(window.location.pathname);
     setLocale(window.location.pathname.startsWith("/it") ? "it" : initialLocale);
   }, [initialLocale]);
-
-  const handleLocaleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    const nextLocale = event.target.value as Locale;
-    setLocale(nextLocale);
-    window.localStorage.setItem("invest-forward-locale", nextLocale);
-    window.location.href = switchLocaleHref(window.location.pathname, nextLocale);
-  };
 
   return (
     <header className="site-header" data-header>
@@ -97,16 +97,19 @@ export default function SiteHeader({ locale: initialLocale = defaultLocale }: Si
             {navLabels[locale][item.key]}
           </a>
         ))}
-        <label className="language-select">
+        <div className="language-select" aria-label="Language selection">
           <span>Language</span>
-          <select aria-label="Language" value={locale} onChange={handleLocaleChange}>
-            {supportedLocales.map((language) => (
-              <option value={language.code} key={language.code}>
+          {supportedLocales.map((language) => (
+              <a
+                aria-current={locale === language.code ? "true" : undefined}
+                className={locale === language.code ? "is-active" : undefined}
+                href={switchLocaleHref(currentPath, language.code)}
+                key={language.code}
+              >
                 {language.shortLabel}
-              </option>
-            ))}
-          </select>
-        </label>
+              </a>
+          ))}
+        </div>
       </nav>
     </header>
   );
