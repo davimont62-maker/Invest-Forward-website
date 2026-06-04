@@ -14,6 +14,29 @@ export const metadata: Metadata = {
       it: "/it",
     },
   },
+  openGraph: {
+    title: "Invest Forward",
+    description:
+      "Sviluppo strategico di progetti e introduzione di capitale per investitori qualificati, partner strategici e family office.",
+    url: "https://www.investforward.co.uk/it",
+    siteName: "Invest Forward",
+    type: "website",
+    locale: "it_IT",
+    images: [
+      {
+        url: "/assets/invest-forward-social-it-v3.png",
+        width: 1200,
+        height: 630,
+        alt: "Invest Forward - Sviluppo Progetti e Introduzione di Capitale",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Invest Forward",
+    description: "Sviluppo strategico di progetti e introduzione di capitale.",
+    images: ["/assets/invest-forward-social-it-v3.png"],
+  },
 };
 
 const trackRecord = [
