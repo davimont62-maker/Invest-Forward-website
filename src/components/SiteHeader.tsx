@@ -6,8 +6,30 @@ import type { ChangeEvent } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-export default function SiteHeader() {
-  const [locale, setLocale] = useState<Locale>(defaultLocale);
+type SiteHeaderProps = {
+  locale?: Locale;
+};
+
+function localizeHref(href: string, locale: Locale) {
+  if (locale === defaultLocale) {
+    return href;
+  }
+
+  return href === "/" ? `/${locale}` : `/${locale}${href}`;
+}
+
+function switchLocaleHref(pathname: string, nextLocale: Locale) {
+  const cleanPath = pathname.replace(/^\/it(?=\/|$)/, "") || "/";
+
+  if (nextLocale === defaultLocale) {
+    return cleanPath;
+  }
+
+  return cleanPath === "/" ? `/${nextLocale}` : `/${nextLocale}${cleanPath}`;
+}
+
+export default function SiteHeader({ locale: initialLocale = defaultLocale }: SiteHeaderProps) {
+  const [locale, setLocale] = useState<Locale>(initialLocale);
 
   useEffect(() => {
     const header = document.querySelector("[data-header]");
@@ -45,16 +67,14 @@ export default function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    const savedLocale = window.localStorage.getItem("invest-forward-locale");
-    if (savedLocale === "en" || savedLocale === "it" || savedLocale === "zh") {
-      setLocale(savedLocale);
-    }
-  }, []);
+    setLocale(window.location.pathname.startsWith("/it") ? "it" : initialLocale);
+  }, [initialLocale]);
 
   const handleLocaleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = event.target.value as Locale;
     setLocale(nextLocale);
     window.localStorage.setItem("invest-forward-locale", nextLocale);
+    window.location.href = switchLocaleHref(window.location.pathname, nextLocale);
   };
 
   return (
@@ -71,7 +91,7 @@ export default function SiteHeader() {
         {navLinks.map((item) => (
           <a
             className={"featured" in item && item.featured ? "nav-featured" : undefined}
-            href={item.href}
+            href={localizeHref(item.href, locale)}
             key={item.href}
           >
             {navLabels[locale][item.key]}

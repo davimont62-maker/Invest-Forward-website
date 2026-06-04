@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata = {
   title: "About | Invest Forward",
   description: "About Invest Forward, a strategic project development and capital introduction platform.",
+  alternates: { canonical: "/about", languages: { en: "/about", it: "/it/about" } },
 };
 
 const sections = [

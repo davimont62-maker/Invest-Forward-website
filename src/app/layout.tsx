@@ -15,9 +15,26 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.investforward.co.uk'),
   title: 'Invest Forward | Strategic Project Development & Capital Introduction',
   description:
     'Invest Forward develops, structures, and presents selected investment opportunities across industrial, energy, technology, and infrastructure sectors.',
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: '/',
+      it: '/it',
+    },
+  },
+  keywords: [
+    'strategic project development',
+    'capital introduction',
+    'investment origination',
+    'real economy investment opportunities',
+    'industrial investment opportunities',
+    'European corporate finance',
+    'investment advisory platform',
+  ],
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -29,8 +46,10 @@ export const metadata: Metadata = {
     title: 'Invest Forward',
     description:
       'Strategic project development and capital introduction for qualified investors, strategic partners, and family offices.',
+    url: 'https://www.investforward.co.uk',
     siteName: 'Invest Forward',
     type: 'website',
+    locale: 'en_GB',
   },
   twitter: {
     card: 'summary_large_image',

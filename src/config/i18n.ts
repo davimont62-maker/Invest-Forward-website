@@ -3,7 +3,6 @@ export const defaultLocale = "en";
 export const supportedLocales = [
   { code: "en", label: "English", shortLabel: "EN" },
   { code: "it", label: "Italiano", shortLabel: "IT" },
-  { code: "zh", label: "中文", shortLabel: "中文" },
 ] as const;
 
 export type Locale = (typeof supportedLocales)[number]["code"];
@@ -36,18 +35,8 @@ export const navLabels: Record<Locale, Record<(typeof navLinks)[number]["key"], 
     services: "Servizi",
     investors: "Investitori",
     opportunities: "Opportunita",
-    insights: "News & Insights",
+    insights: "News",
     team: "Team",
     contact: "Contatti",
-  },
-  zh: {
-    home: "首页",
-    about: "关于",
-    services: "服务",
-    investors: "投资者",
-    opportunities: "项目机会",
-    insights: "新闻与洞察",
-    team: "团队",
-    contact: "联系",
   },
 };

@@ -5,6 +5,7 @@ import MailtoForm from "@/components/MailtoForm";
 export const metadata = {
   title: "Contact | Invest Forward",
   description: "Contact Invest Forward to discuss a project, investor context, or capital introduction.",
+  alternates: { canonical: "/contact", languages: { en: "/contact", it: "/it/contact" } },
 };
 
 export default function ContactPage() {

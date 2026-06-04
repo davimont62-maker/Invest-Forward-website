@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata = {
   title: "Services | Invest Forward",
   description: "Project development, capital introduction, investment materials, and strategic advisory services.",
+  alternates: { canonical: "/services", languages: { en: "/services", it: "/it/services" } },
 };
 
 const services = [

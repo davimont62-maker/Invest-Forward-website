@@ -5,6 +5,7 @@ import MailtoForm from "@/components/MailtoForm";
 export const metadata = {
   title: "Investors | Invest Forward",
   description: "Information for qualified investors, family offices, strategic investors, and institutional contacts.",
+  alternates: { canonical: "/investors", languages: { en: "/investors", it: "/it/investors" } },
 };
 
 const investorTypes = [

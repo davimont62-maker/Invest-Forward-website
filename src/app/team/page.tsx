@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata = {
   title: "Team & Advisors | Invest Forward",
   description: "Invest Forward management team, advisors, and country managers.",
+  alternates: { canonical: "/team", languages: { en: "/team", it: "/it/team" } },
 };
 
 type Profile = {

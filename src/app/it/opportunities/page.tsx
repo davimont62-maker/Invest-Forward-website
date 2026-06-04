@@ -1,57 +1,60 @@
+import type { Metadata } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
-export const metadata = {
-  title: "Opportunities | Invest Forward",
-  description: "Confidential portfolio overview of selected opportunities for qualified parties.",
-  alternates: { canonical: "/opportunities", languages: { en: "/opportunities", it: "/it/opportunities" } },
+export const metadata: Metadata = {
+  title: "Opportunita | Invest Forward",
+  description:
+    "Panoramica riservata di opportunita selezionate per soggetti qualificati, con accesso a materiali dettagliati dopo registrazione e revisione.",
+  alternates: { canonical: "/it/opportunities", languages: { en: "/opportunities", it: "/it/opportunities" } },
 };
 
 const opportunities = [
   {
     title: "Gunpowder Project - Vegetable Charcoal",
-    sector: "Strategic Materials",
-    geography: "Serbia / Europe",
+    sector: "Materiali strategici",
+    geography: "Serbia / Europa",
     stage: "Seed launch",
-    status: "Active",
-    requirement: "EUR 1.0m seed startup capital",
+    status: "Attiva",
+    requirement: "EUR 1,0m capitale seed startup",
     visual: "materials",
     monogram: "GP",
     image: "/assets/opportunity-gunpowder-banner.png",
     summary:
-      "Specialty technical-charcoal platform designed to serve industrial, pyrotechnic, and energetic-material supply chains with controlled production, QA, and traceability.",
-    focus: ["150-300 t ramp", "Serbian production base", "Controlled technical carbon"],
+      "Piattaforma di carbone vegetale tecnico per supply chain industriali, pirotecniche ed energetic-material, con produzione controllata, QA e tracciabilita.",
+    focus: ["Ramp 150-300 t", "Base produttiva in Serbia", "Carbonio tecnico controllato"],
     href: "/opportunities/gunpowder-project",
   },
   {
     title: "BitPoint - Loyalty Points Platform",
-    sector: "Technology / Loyalty Infrastructure",
-    geography: "Europe / Global",
-    stage: "Launch preparation",
-    status: "Active",
-    requirement: "EUR 2.2m operational expansion capital",
+    sector: "Tecnologia / Loyalty Infrastructure",
+    geography: "Europa / Globale",
+    stage: "Preparazione al lancio",
+    status: "Attiva",
+    requirement: "EUR 2,2m capitale per espansione operativa",
     visual: "bitpoint",
     monogram: "BP",
     image: "/assets/opportunity-bitpoint-banner.png",
     summary:
-      "Consumer technology platform designed to help users unlock value from unused loyalty points through a centralized rewards and redemption experience.",
-    focus: ["Loyalty points conversion", "Partner brand model", "Rewards marketplace"],
+      "Piattaforma consumer technology progettata per aiutare gli utenti a valorizzare punti loyalty inutilizzati attraverso un'esperienza centralizzata di rewards e redemption.",
+    focus: ["Conversione punti loyalty", "Modello partner-brand", "Rewards marketplace"],
     href: "/opportunities/bitpoint",
   },
 ];
 
-export default function OpportunitiesPage() {
+export default function ItalianOpportunitiesPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale="it" />
       <main>
         <section className="page-hero opportunities-hero">
           <div className="container">
             <p className="eyebrow">Portfolio overview</p>
-            <h1>Active investment opportunities</h1>
+            <h1>Opportunita di investimento attive</h1>
             <p>
-              Selected real-economy opportunities under confidential review. Detailed information is
-              provided only to qualified parties following registration and review.
+              Opportunita selezionate dell'economia reale in revisione confidenziale. Le
+              informazioni dettagliate sono fornite solo a soggetti qualificati dopo registrazione
+              e review.
             </p>
           </div>
         </section>
@@ -59,12 +62,12 @@ export default function OpportunitiesPage() {
           <div className="container">
             <div className="portfolio-intro">
               <div>
-                <p className="eyebrow">Current portfolio</p>
-                <h2>Selected investment opportunities</h2>
+                <p className="eyebrow">Portfolio corrente</p>
+                <h2>Opportunita selezionate</h2>
               </div>
               <p>
-                These are not public offers or retail investment listings. Each opportunity is
-                introduced through a relationship-led process with professional counterparties.
+                Non si tratta di offerte pubbliche o listing retail. Ogni opportunita viene
+                introdotta attraverso un processo relationship-led con controparti professionali.
               </p>
             </div>
 
@@ -104,19 +107,19 @@ export default function OpportunitiesPage() {
                     <div className="opportunity-facts">
                       <div>
                         <strong>{opportunity.requirement}</strong>
-                        <span>Strategic requirement</span>
+                        <span>Requisito strategico</span>
                       </div>
                       <div>
                         <strong>{opportunity.stage}</strong>
-                        <span>Development stage</span>
+                        <span>Fase di sviluppo</span>
                       </div>
                     </div>
 
                     <p className="confidential-note">
-                      Information available to qualified parties upon request.
+                      Informazioni disponibili a soggetti qualificati su richiesta.
                     </p>
                     <a className="btn btn-secondary btn-card" href={opportunity.href}>
-                      Request teaser access
+                      Richiedi accesso teaser
                     </a>
                   </div>
                 </article>
@@ -127,19 +130,19 @@ export default function OpportunitiesPage() {
         <section className="section opportunity-access-section">
           <div className="container opportunity-access">
             <div>
-              <p className="eyebrow">Controlled access</p>
-              <h2>Further information is shared through a qualification process.</h2>
+              <p className="eyebrow">Accesso controllato</p>
+              <h2>Ulteriori informazioni sono condivise attraverso un processo di qualificazione.</h2>
               <p>
-                Invest Forward may provide additional summaries, documentation, management
-                introductions, or diligence materials after confirming strategic fit, investor
-                profile, and confidentiality requirements.
+                Invest Forward puo fornire sintesi aggiuntive, documentazione, introduzioni al
+                management o materiali di diligence dopo aver confermato fit strategico, profilo
+                investitore e requisiti di riservatezza.
               </p>
             </div>
-            <a className="btn btn-primary" href="/contact">Request opportunity access</a>
+            <a className="btn btn-primary" href="/it/contact">Richiedi accesso</a>
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter locale="it" />
     </>
   );
 }
