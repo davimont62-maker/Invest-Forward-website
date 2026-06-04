@@ -41,6 +41,7 @@ export const metadata: Metadata = {
       { url: '/assets/favicon.svg', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.svg',
+    apple: '/assets/favicon-256.png',
   },
   openGraph: {
     title: 'Invest Forward',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     images: [
       {
-        url: '/assets/social-preview.png',
+        url: '/assets/invest-forward-social-v2.png',
         width: 1200,
         height: 630,
         alt: 'Invest Forward - Strategic Project Development and Capital Introduction',
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Invest Forward',
     description: 'Strategic project development and capital introduction.',
-    images: ['/assets/social-preview.png'],
+    images: ['/assets/invest-forward-social-v2.png'],
   },
 };
 
