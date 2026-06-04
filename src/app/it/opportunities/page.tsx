@@ -23,7 +23,7 @@ const opportunities = [
     summary:
       "Piattaforma di carbone vegetale tecnico per supply chain industriali, pirotecniche ed energetic-material, con produzione controllata, QA e tracciabilita.",
     focus: ["Ramp 150-300 t", "Base produttiva in Serbia", "Carbonio tecnico controllato"],
-    href: "/opportunities/gunpowder-project",
+    href: "/it/opportunities/gunpowder-project",
   },
   {
     title: "BitPoint - Loyalty Points Platform",
@@ -38,7 +38,7 @@ const opportunities = [
     summary:
       "Piattaforma consumer technology progettata per aiutare gli utenti a valorizzare punti loyalty inutilizzati attraverso un'esperienza centralizzata di rewards e redemption.",
     focus: ["Conversione punti loyalty", "Modello partner-brand", "Rewards marketplace"],
-    href: "/opportunities/bitpoint",
+    href: "/it/opportunities/bitpoint",
   },
 ];
 

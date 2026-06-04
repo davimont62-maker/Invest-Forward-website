@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Manrope, Source_Serif_4 } from 'next/font/google';
+import JsonLd from '@/components/JsonLd';
 import './globals.css';
 
 const display = Source_Serif_4({
@@ -73,9 +74,52 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Invest Forward',
+    url: 'https://www.investforward.co.uk',
+    logo: 'https://www.investforward.co.uk/assets/invest-forward-logo-site.png',
+    email: 'enquiries@investforward.co.uk',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Suite 2a, 95 Wilton Road',
+      addressLocality: 'London',
+      postalCode: 'SW1V 1BZ',
+      addressCountry: 'GB',
+    },
+    description:
+      'Boutique strategic project development and capital introduction across selected real-economy sectors.',
+    areaServed: ['United Kingdom', 'Europe'],
+    knowsAbout: [
+      'Strategic project development',
+      'Capital introduction',
+      'Investment origination',
+      'Industrial opportunities',
+      'Energy infrastructure',
+      'Technology platforms',
+      'Strategic manufacturing',
+    ],
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Invest Forward',
+    url: 'https://www.investforward.co.uk',
+    inLanguage: ['en-GB', 'it-IT'],
+    publisher: {
+      '@type': 'Organization',
+      name: 'Invest Forward',
+    },
+  };
+
   return (
     <html lang="en">
-      <body className={`${display.variable} ${sans.variable}`}>{children}</body>
+      <body className={`${display.variable} ${sans.variable}`}>
+        <JsonLd data={[organizationSchema, websiteSchema]} />
+        {children}
+      </body>
     </html>
   );
 }

@@ -5,7 +5,21 @@ import MailtoForm from "@/components/MailtoForm";
 export const metadata = {
   title: "Gunpowder Project | Invest Forward",
   description:
-    "Registration page for qualified parties requesting access to the Gunpowder Project teaser.",
+    "Confidential overview of the Gunpowder Project, a Serbian vegetable charcoal and strategic materials opportunity for qualified parties.",
+  alternates: {
+    canonical: "/opportunities/gunpowder-project",
+    languages: {
+      en: "/opportunities/gunpowder-project",
+      it: "/it/opportunities/gunpowder-project",
+    },
+  },
+  openGraph: {
+    title: "Gunpowder Project - Vegetable Charcoal | Invest Forward",
+    description:
+      "Strategic materials opportunity focused on controlled technical charcoal production for selected industrial and energetic-material supply chains.",
+    url: "https://www.investforward.co.uk/opportunities/gunpowder-project",
+    images: [{ url: "/assets/opportunity-gunpowder-banner.png", width: 1200, height: 630 }],
+  },
 };
 
 const overview = [

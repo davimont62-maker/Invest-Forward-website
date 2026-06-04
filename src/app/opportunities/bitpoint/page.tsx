@@ -5,7 +5,21 @@ import MailtoForm from "@/components/MailtoForm";
 export const metadata = {
   title: "BitPoint | Invest Forward",
   description:
-    "Public overview for qualified parties requesting access to the BitPoint opportunity teaser.",
+    "Confidential overview of BitPoint, a loyalty points technology platform opportunity for qualified parties.",
+  alternates: {
+    canonical: "/opportunities/bitpoint",
+    languages: {
+      en: "/opportunities/bitpoint",
+      it: "/it/opportunities/bitpoint",
+    },
+  },
+  openGraph: {
+    title: "BitPoint - Loyalty Points Platform | Invest Forward",
+    description:
+      "Technology opportunity focused on converting unused loyalty points into a structured rewards and redemption platform.",
+    url: "https://www.investforward.co.uk/opportunities/bitpoint",
+    images: [{ url: "/assets/opportunity-bitpoint-banner.png", width: 1200, height: 630 }],
+  },
 };
 
 const overview = [

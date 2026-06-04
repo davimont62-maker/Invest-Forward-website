@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import JsonLd from "@/components/JsonLd";
 import { getNewsInsight, newsInsights } from "@/data/newsInsights";
 import { notFound } from "next/navigation";
 
@@ -22,6 +23,23 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${article.title} | Invest Forward`,
     description: article.excerpt,
+    alternates: {
+      canonical: `/news-insights/${article.id}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: `https://www.investforward.co.uk/news-insights/${article.id}`,
+      type: "article",
+      publishedTime: article.date,
+      images: [
+        {
+          url: article.image ?? "/assets/invest-forward-social-v2.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   };
 }
 
@@ -33,8 +51,32 @@ export default async function NewsInsightArticlePage({ params }: PageProps) {
     notFound();
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.date,
+    dateModified: article.date,
+    image: `https://www.investforward.co.uk${article.image ?? "/assets/invest-forward-social-v2.png"}`,
+    mainEntityOfPage: `https://www.investforward.co.uk/news-insights/${article.id}`,
+    author: {
+      "@type": "Organization",
+      name: "Invest Forward",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Invest Forward",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.investforward.co.uk/assets/invest-forward-logo-site.png",
+      },
+    },
+  };
+
   return (
     <>
+      <JsonLd data={articleSchema} />
       <SiteHeader />
       <main>
         <section className="page-hero compact-page-hero article-hero">
