@@ -50,11 +50,20 @@ export const metadata: Metadata = {
     siteName: 'Invest Forward',
     type: 'website',
     locale: 'en_GB',
+    images: [
+      {
+        url: '/assets/social-preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Invest Forward - Strategic Project Development and Capital Introduction',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Invest Forward',
     description: 'Strategic project development and capital introduction.',
+    images: ['/assets/social-preview.png'],
   },
 };
 
